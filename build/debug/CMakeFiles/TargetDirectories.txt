@@ -1,0 +1,17 @@
+/home/devero11/voxel_pathtracer/build/debug/CMakeFiles/edit_cache.dir
+/home/devero11/voxel_pathtracer/build/debug/CMakeFiles/rebuild_cache.dir
+/home/devero11/voxel_pathtracer/build/debug/src/app/CMakeFiles/VxTracer.dir
+/home/devero11/voxel_pathtracer/build/debug/src/app/CMakeFiles/edit_cache.dir
+/home/devero11/voxel_pathtracer/build/debug/src/app/CMakeFiles/rebuild_cache.dir
+/home/devero11/voxel_pathtracer/build/debug/src/platform/window/CMakeFiles/window.dir
+/home/devero11/voxel_pathtracer/build/debug/src/platform/window/CMakeFiles/edit_cache.dir
+/home/devero11/voxel_pathtracer/build/debug/src/platform/window/CMakeFiles/rebuild_cache.dir
+/home/devero11/voxel_pathtracer/build/debug/libs/glad/CMakeFiles/glad.dir
+/home/devero11/voxel_pathtracer/build/debug/libs/glad/CMakeFiles/edit_cache.dir
+/home/devero11/voxel_pathtracer/build/debug/libs/glad/CMakeFiles/rebuild_cache.dir
+/home/devero11/voxel_pathtracer/build/debug/src/core/utils/CMakeFiles/shader_tools.dir
+/home/devero11/voxel_pathtracer/build/debug/src/core/utils/CMakeFiles/edit_cache.dir
+/home/devero11/voxel_pathtracer/build/debug/src/core/utils/CMakeFiles/rebuild_cache.dir
+/home/devero11/voxel_pathtracer/build/debug/src/renderer/CMakeFiles/render.dir
+/home/devero11/voxel_pathtracer/build/debug/src/renderer/CMakeFiles/edit_cache.dir
+/home/devero11/voxel_pathtracer/build/debug/src/renderer/CMakeFiles/rebuild_cache.dir
