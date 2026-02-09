@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/devero11/voxel_pathtracer/src/core/utils -I/home/devero11/voxel_pathtracer/src/platform/window -I/home/devero11/voxel_pathtracer/src/renderer
+CXX_INCLUDES = -I/home/devero11/voxel_pathtracer/src/app -I/home/devero11/voxel_pathtracer/src/renderer -I/home/devero11/voxel_pathtracer/src/core/utils -I/home/devero11/voxel_pathtracer/src/platform/window -I/home/devero11/voxel_pathtracer/libs/glad
 
 CXX_FLAGS = -g -std=gnu++17
 

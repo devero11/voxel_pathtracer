@@ -137,6 +137,20 @@ render/fast:
 	cd /home/devero11/voxel_pathtracer/build/debug && $(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/render.dir/build.make src/renderer/CMakeFiles/render.dir/build
 .PHONY : render/fast
 
+# Convenience name for target.
+src/renderer/CMakeFiles/screen_tex.dir/rule:
+	cd /home/devero11/voxel_pathtracer/build/debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/renderer/CMakeFiles/screen_tex.dir/rule
+.PHONY : src/renderer/CMakeFiles/screen_tex.dir/rule
+
+# Convenience name for target.
+screen_tex: src/renderer/CMakeFiles/screen_tex.dir/rule
+.PHONY : screen_tex
+
+# fast build rule for target.
+screen_tex/fast:
+	cd /home/devero11/voxel_pathtracer/build/debug && $(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/screen_tex.dir/build.make src/renderer/CMakeFiles/screen_tex.dir/build
+.PHONY : screen_tex/fast
+
 render.o: render.cpp.o
 .PHONY : render.o
 
@@ -161,6 +175,30 @@ render.cpp.s:
 	cd /home/devero11/voxel_pathtracer/build/debug && $(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/render.dir/build.make src/renderer/CMakeFiles/render.dir/render.cpp.s
 .PHONY : render.cpp.s
 
+screen_texture.o: screen_texture.cpp.o
+.PHONY : screen_texture.o
+
+# target to build an object file
+screen_texture.cpp.o:
+	cd /home/devero11/voxel_pathtracer/build/debug && $(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/screen_tex.dir/build.make src/renderer/CMakeFiles/screen_tex.dir/screen_texture.cpp.o
+.PHONY : screen_texture.cpp.o
+
+screen_texture.i: screen_texture.cpp.i
+.PHONY : screen_texture.i
+
+# target to preprocess a source file
+screen_texture.cpp.i:
+	cd /home/devero11/voxel_pathtracer/build/debug && $(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/screen_tex.dir/build.make src/renderer/CMakeFiles/screen_tex.dir/screen_texture.cpp.i
+.PHONY : screen_texture.cpp.i
+
+screen_texture.s: screen_texture.cpp.s
+.PHONY : screen_texture.s
+
+# target to generate assembly for a file
+screen_texture.cpp.s:
+	cd /home/devero11/voxel_pathtracer/build/debug && $(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/screen_tex.dir/build.make src/renderer/CMakeFiles/screen_tex.dir/screen_texture.cpp.s
+.PHONY : screen_texture.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -171,9 +209,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... render"
+	@echo "... screen_tex"
 	@echo "... render.o"
 	@echo "... render.i"
 	@echo "... render.s"
+	@echo "... screen_texture.o"
+	@echo "... screen_texture.i"
+	@echo "... screen_texture.s"
 .PHONY : help
 
 

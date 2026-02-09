@@ -137,6 +137,19 @@ VxTracer/fast:
 .PHONY : VxTracer/fast
 
 #=============================================================================
+# Target rules for targets named engine
+
+# Build rule for target.
+engine: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine
+.PHONY : engine
+
+# fast build rule for target.
+engine/fast:
+	$(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/engine.dir/build.make src/app/CMakeFiles/engine.dir/build
+.PHONY : engine/fast
+
+#=============================================================================
 # Target rules for targets named window
 
 # Build rule for target.
@@ -188,6 +201,19 @@ render/fast:
 	$(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/render.dir/build.make src/renderer/CMakeFiles/render.dir/build
 .PHONY : render/fast
 
+#=============================================================================
+# Target rules for targets named screen_tex
+
+# Build rule for target.
+screen_tex: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 screen_tex
+.PHONY : screen_tex
+
+# fast build rule for target.
+screen_tex/fast:
+	$(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/screen_tex.dir/build.make src/renderer/CMakeFiles/screen_tex.dir/build
+.PHONY : screen_tex/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -198,8 +224,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... VxTracer"
+	@echo "... engine"
 	@echo "... glad"
 	@echo "... render"
+	@echo "... screen_tex"
 	@echo "... shader_tools"
 	@echo "... window"
 .PHONY : help

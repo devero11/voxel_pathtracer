@@ -1,6 +1,7 @@
 /home/devero11/voxel_pathtracer/build/debug/CMakeFiles/edit_cache.dir
 /home/devero11/voxel_pathtracer/build/debug/CMakeFiles/rebuild_cache.dir
 /home/devero11/voxel_pathtracer/build/debug/src/app/CMakeFiles/VxTracer.dir
+/home/devero11/voxel_pathtracer/build/debug/src/app/CMakeFiles/engine.dir
 /home/devero11/voxel_pathtracer/build/debug/src/app/CMakeFiles/edit_cache.dir
 /home/devero11/voxel_pathtracer/build/debug/src/app/CMakeFiles/rebuild_cache.dir
 /home/devero11/voxel_pathtracer/build/debug/src/platform/window/CMakeFiles/window.dir
@@ -13,5 +14,6 @@
 /home/devero11/voxel_pathtracer/build/debug/src/core/utils/CMakeFiles/edit_cache.dir
 /home/devero11/voxel_pathtracer/build/debug/src/core/utils/CMakeFiles/rebuild_cache.dir
 /home/devero11/voxel_pathtracer/build/debug/src/renderer/CMakeFiles/render.dir
+/home/devero11/voxel_pathtracer/build/debug/src/renderer/CMakeFiles/screen_tex.dir
 /home/devero11/voxel_pathtracer/build/debug/src/renderer/CMakeFiles/edit_cache.dir
 /home/devero11/voxel_pathtracer/build/debug/src/renderer/CMakeFiles/rebuild_cache.dir

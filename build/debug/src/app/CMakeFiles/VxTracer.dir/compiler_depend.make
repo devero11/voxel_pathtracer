@@ -3,11 +3,14 @@
 
 src/app/CMakeFiles/VxTracer.dir/main.cpp.o: /home/devero11/voxel_pathtracer/src/app/main.cpp \
   /home/devero11/voxel_pathtracer/libs/glad/glad.h \
+  /home/devero11/voxel_pathtracer/libs/glad/glad.h \
   /home/devero11/voxel_pathtracer/src/platform/window/window.h \
   /home/devero11/voxel_pathtracer/libs/glad/glad.h \
   /home/devero11/voxel_pathtracer/libs/glad/glad.h \
   /home/devero11/voxel_pathtracer/src/core/utils/shader_tools.h \
   /home/devero11/voxel_pathtracer/src/renderer/render.h \
+  /home/devero11/voxel_pathtracer/src/renderer/screen_texture.h \
+  /home/devero11/voxel_pathtracer/src/app/engine.h \
   /usr/include/GLFW/glfw3.h \
   /usr/include/KHR/khrplatform.h \
   /usr/include/alloca.h \
@@ -253,6 +256,7 @@ src/app/VxTracer: libs/glad/libglad.a \
   src/core/utils/libshader_tools.a \
   src/platform/window/libwindow.a \
   src/renderer/librender.a \
+  src/renderer/libscreen_tex.a \
   /lib64/ld-linux-x86-64.so.2 \
   /lib64/libc.so.6 \
   /lib64/libgcc_s.so.1 \
@@ -270,8 +274,11 @@ src/app/VxTracer: libs/glad/libglad.a \
   /usr/lib/gcc/x86_64-redhat-linux/15/libstdc++.so \
   /usr/lib64/libc_nonshared.a \
   /usr/lib64/libglfw.so.3.4 \
-  src/app/CMakeFiles/VxTracer.dir/main.cpp.o
+  src/app/CMakeFiles/VxTracer.dir/main.cpp.o \
+  src/app/libengine.a
 
+
+src/app/libengine.a:
 
 /usr/lib64/libglfw.so.3.4:
 
@@ -281,7 +288,7 @@ src/app/VxTracer: libs/glad/libglad.a \
 
 /usr/lib64/libm.so:
 
-/usr/include/c++/15/bits/ostream.tcc:
+/usr/lib64/crt1.o:
 
 /usr/include/c++/15/bits/move.h:
 
@@ -296,6 +303,8 @@ src/app/VxTracer: libs/glad/libglad.a \
 /usr/include/c++/15/bits/memory_resource.h:
 
 /usr/include/bits/types/struct_timespec.h:
+
+/home/devero11/voxel_pathtracer/src/renderer/screen_texture.h:
 
 /usr/include/c++/15/bits/locale_facets.tcc:
 
@@ -327,8 +336,6 @@ src/platform/window/libwindow.a:
 
 /lib64/ld-linux-x86-64.so.2:
 
-/usr/include/c++/15/initializer_list:
-
 /usr/lib/gcc/x86_64-redhat-linux/15/libgcc_s.so:
 
 /usr/include/c++/15/bits/cxxabi_forced.h:
@@ -355,10 +362,6 @@ src/platform/window/libwindow.a:
 
 /usr/include/KHR/khrplatform.h:
 
-/usr/include/c++/15/bits/cpp_type_traits.h:
-
-/usr/include/bits/wctype-wchar.h:
-
 /usr/include/sys/types.h:
 
 /usr/include/bits/timesize.h:
@@ -377,9 +380,19 @@ src/platform/window/libwindow.a:
 
 /usr/include/bits/types/sigset_t.h:
 
+/usr/include/c++/15/bits/cpp_type_traits.h:
+
+/usr/include/bits/wctype-wchar.h:
+
+/home/devero11/voxel_pathtracer/src/app/engine.h:
+
 /usr/include/bits/types/mbstate_t.h:
 
 /usr/include/c++/15/bits/fs_ops.h:
+
+/usr/lib64/crtn.o:
+
+/usr/include/c++/15/bits/ios_base.h:
 
 /usr/include/c++/15/sstream:
 
@@ -387,23 +400,29 @@ src/platform/window/libwindow.a:
 
 /usr/include/c++/15/bits/alloc_traits.h:
 
-/usr/include/bits/libc-header-start.h:
-
-/usr/include/c++/15/x86_64-redhat-linux/bits/ctype_base.h:
-
-/usr/include/c++/15/istream:
-
 /usr/include/c++/15/x86_64-redhat-linux/bits/error_constants.h:
 
 /usr/include/bits/errno.h:
 
 /usr/include/bits/timex.h:
 
+/usr/include/c++/15/bits/basic_string.tcc:
+
+/usr/include/c++/15/bits/streambuf.tcc:
+
+/usr/include/bits/atomic_wide_counter.h:
+
+/usr/include/c++/15/bits/hash_bytes.h:
+
+/lib64/libm.so.6:
+
 /usr/include/bits/locale.h:
 
 /usr/include/bits/uintn-identity.h:
 
 /usr/include/bits/typesizes.h:
+
+/usr/include/c++/15/initializer_list:
 
 /usr/include/bits/struct_mutex.h:
 
@@ -412,6 +431,30 @@ src/platform/window/libwindow.a:
 /usr/include/asm-generic/types.h:
 
 /usr/include/asm-generic/errno-base.h:
+
+/usr/include/bits/floatn.h:
+
+/usr/include/c++/15/bits/refwrap.h:
+
+/usr/include/c++/15/type_traits:
+
+/usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h:
+
+/usr/include/c++/15/x86_64-redhat-linux/bits/gthr.h:
+
+/home/devero11/voxel_pathtracer/src/app/main.cpp:
+
+/usr/include/c++/15/bits/utility.h:
+
+/usr/include/c++/15/bit:
+
+/usr/include/c++/15/bits/allocator.h:
+
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/bits/types/__sigset_t.h:
 
 /usr/include/c++/15/bits/locale_facets_nonio.tcc:
 
@@ -457,16 +500,6 @@ src/platform/window/libwindow.a:
 
 /usr/include/bits/time64.h:
 
-/usr/include/bits/atomic_wide_counter.h:
-
-/usr/include/c++/15/bits/hash_bytes.h:
-
-/lib64/libm.so.6:
-
-/usr/include/c++/15/bits/basic_string.tcc:
-
-/usr/include/c++/15/bits/streambuf.tcc:
-
 /home/devero11/voxel_pathtracer/src/renderer/render.h:
 
 /usr/include/c++/15/locale:
@@ -476,10 +509,6 @@ src/platform/window/libwindow.a:
 /usr/include/c++/15/bits/ostream_insert.h:
 
 /usr/include/bits/types/error_t.h:
-
-/home/devero11/voxel_pathtracer/src/app/main.cpp:
-
-/usr/include/c++/15/bits/utility.h:
 
 /usr/include/asm-generic/errno.h:
 
@@ -491,33 +520,17 @@ src/platform/window/libwindow.a:
 
 /usr/include/c++/15/bits/uses_allocator.h:
 
-/usr/lib64/crt1.o:
-
 /usr/include/bits/types/__fpos_t.h:
 
 /usr/include/c++/15/bits/charconv.h:
 
 /usr/include/bits/types/clock_t.h:
 
-/usr/include/bits/floatn.h:
+/usr/include/bits/libc-header-start.h:
 
-/usr/include/c++/15/bits/refwrap.h:
+/usr/include/c++/15/x86_64-redhat-linux/bits/ctype_base.h:
 
-/usr/include/c++/15/type_traits:
-
-/usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h:
-
-/usr/include/c++/15/x86_64-redhat-linux/bits/gthr.h:
-
-/usr/include/bits/types/__sigset_t.h:
-
-/usr/include/c++/15/bit:
-
-/usr/include/c++/15/bits/allocator.h:
-
-/usr/include/asm-generic/posix_types.h:
-
-/usr/include/stdc-predef.h:
+/usr/include/c++/15/istream:
 
 /usr/include/bits/long-double.h:
 
@@ -597,6 +610,8 @@ src/platform/window/libwindow.a:
 
 /usr/include/bits/types/__locale_t.h:
 
+/usr/include/c++/15/bits/ostream.tcc:
+
 /usr/include/c++/15/bits/parse_numbers.h:
 
 /usr/include/c++/15/bits/postypes.h:
@@ -646,6 +661,8 @@ src/platform/window/libwindow.a:
 /usr/include/bits/stdlib-float.h:
 
 libs/glad/libglad.a:
+
+src/renderer/libscreen_tex.a:
 
 /usr/lib/gcc/x86_64-redhat-linux/15/crtend.o:
 
@@ -777,6 +794,12 @@ src/app/CMakeFiles/VxTracer.dir/main.cpp.o:
 
 /usr/include/locale.h:
 
+/usr/lib64/crti.o:
+
+/usr/include/bits/wordsize.h:
+
+/usr/include/stdio.h:
+
 /usr/include/stdlib.h:
 
 /usr/include/sys/select.h:
@@ -796,13 +819,3 @@ src/renderer/librender.a:
 /lib64/libc.so.6:
 
 /lib64/libgcc_s.so.1:
-
-/usr/include/bits/wordsize.h:
-
-/usr/include/stdio.h:
-
-/usr/lib64/crti.o:
-
-/usr/include/c++/15/bits/ios_base.h:
-
-/usr/lib64/crtn.o:

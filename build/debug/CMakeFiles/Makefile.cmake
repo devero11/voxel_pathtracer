@@ -77,8 +77,10 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/app/CMakeFiles/VxTracer.dir/DependInfo.cmake"
+  "src/app/CMakeFiles/engine.dir/DependInfo.cmake"
   "src/platform/window/CMakeFiles/window.dir/DependInfo.cmake"
   "libs/glad/CMakeFiles/glad.dir/DependInfo.cmake"
   "src/core/utils/CMakeFiles/shader_tools.dir/DependInfo.cmake"
   "src/renderer/CMakeFiles/render.dir/DependInfo.cmake"
+  "src/renderer/CMakeFiles/screen_tex.dir/DependInfo.cmake"
   )

@@ -137,6 +137,44 @@ VxTracer/fast:
 	cd /home/devero11/voxel_pathtracer/build/debug && $(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/VxTracer.dir/build.make src/app/CMakeFiles/VxTracer.dir/build
 .PHONY : VxTracer/fast
 
+# Convenience name for target.
+src/app/CMakeFiles/engine.dir/rule:
+	cd /home/devero11/voxel_pathtracer/build/debug && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/app/CMakeFiles/engine.dir/rule
+.PHONY : src/app/CMakeFiles/engine.dir/rule
+
+# Convenience name for target.
+engine: src/app/CMakeFiles/engine.dir/rule
+.PHONY : engine
+
+# fast build rule for target.
+engine/fast:
+	cd /home/devero11/voxel_pathtracer/build/debug && $(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/engine.dir/build.make src/app/CMakeFiles/engine.dir/build
+.PHONY : engine/fast
+
+engine.o: engine.cpp.o
+.PHONY : engine.o
+
+# target to build an object file
+engine.cpp.o:
+	cd /home/devero11/voxel_pathtracer/build/debug && $(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/engine.dir/build.make src/app/CMakeFiles/engine.dir/engine.cpp.o
+.PHONY : engine.cpp.o
+
+engine.i: engine.cpp.i
+.PHONY : engine.i
+
+# target to preprocess a source file
+engine.cpp.i:
+	cd /home/devero11/voxel_pathtracer/build/debug && $(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/engine.dir/build.make src/app/CMakeFiles/engine.dir/engine.cpp.i
+.PHONY : engine.cpp.i
+
+engine.s: engine.cpp.s
+.PHONY : engine.s
+
+# target to generate assembly for a file
+engine.cpp.s:
+	cd /home/devero11/voxel_pathtracer/build/debug && $(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/engine.dir/build.make src/app/CMakeFiles/engine.dir/engine.cpp.s
+.PHONY : engine.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -171,6 +209,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... VxTracer"
+	@echo "... engine"
+	@echo "... engine.o"
+	@echo "... engine.i"
+	@echo "... engine.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

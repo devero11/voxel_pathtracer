@@ -3,6 +3,8 @@ VxTracer: \
   /usr/lib/gcc/x86_64-redhat-linux/15/../../../../lib64/crti.o \
   /usr/lib/gcc/x86_64-redhat-linux/15/crtbegin.o \
   CMakeFiles/VxTracer.dir/main.cpp.o \
+  libengine.a \
+  ../renderer/libscreen_tex.a \
   ../core/utils/libshader_tools.a \
   ../platform/window/libwindow.a \
   /usr/lib64/libglfw.so.3.4 \
@@ -44,6 +46,10 @@ VxTracer: \
 /usr/lib/gcc/x86_64-redhat-linux/15/crtbegin.o:
 
 CMakeFiles/VxTracer.dir/main.cpp.o:
+
+libengine.a:
+
+../renderer/libscreen_tex.a:
 
 ../core/utils/libshader_tools.a:
 

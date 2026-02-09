@@ -4,11 +4,14 @@
 src/app/CMakeFiles/VxTracer.dir/main.cpp.o
  /home/devero11/voxel_pathtracer/src/app/main.cpp
  /home/devero11/voxel_pathtracer/libs/glad/glad.h
+ /home/devero11/voxel_pathtracer/libs/glad/glad.h
  /home/devero11/voxel_pathtracer/src/platform/window/window.h
  /home/devero11/voxel_pathtracer/libs/glad/glad.h
  /home/devero11/voxel_pathtracer/libs/glad/glad.h
  /home/devero11/voxel_pathtracer/src/core/utils/shader_tools.h
  /home/devero11/voxel_pathtracer/src/renderer/render.h
+ /home/devero11/voxel_pathtracer/src/renderer/screen_texture.h
+ /home/devero11/voxel_pathtracer/src/app/engine.h
  /usr/include/GLFW/glfw3.h
  /usr/include/KHR/khrplatform.h
  /usr/include/alloca.h
@@ -255,6 +258,7 @@ src/app/VxTracer
  /home/devero11/voxel_pathtracer/build/debug/src/core/utils/libshader_tools.a
  /home/devero11/voxel_pathtracer/build/debug/src/platform/window/libwindow.a
  /home/devero11/voxel_pathtracer/build/debug/src/renderer/librender.a
+ /home/devero11/voxel_pathtracer/build/debug/src/renderer/libscreen_tex.a
  /lib64/ld-linux-x86-64.so.2
  /lib64/libc.so.6
  /lib64/libgcc_s.so.1
@@ -273,4 +277,5 @@ src/app/VxTracer
  /usr/lib64/libc_nonshared.a
  /usr/lib64/libglfw.so.3.4
  /home/devero11/voxel_pathtracer/build/debug/src/app/CMakeFiles/VxTracer.dir/main.cpp.o
+ /home/devero11/voxel_pathtracer/build/debug/src/app/libengine.a
 

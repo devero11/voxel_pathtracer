@@ -1,0 +1,25 @@
+#version 430
+layout(local_size_x = 16, local_size_y = 16) in;
+
+layout(rgba8, binding = 0) writeonly uniform image2D imgOutput;
+
+void main() {
+    ivec2 pixelCoords = ivec2(gl_GlobalInvocationID.xy);
+    ivec2 size = imageSize(imgOutput);
+
+    if (pixelCoords.x < size.x && pixelCoords.y < size.y) {
+        // Define the size of each checker square (e.g., 32x32 pixels)
+        int squareSize = 32;
+
+        // Determine which "grid cell" this pixel belongs to
+        ivec2 gridPos = pixelCoords / squareSize;
+
+        // Checker logic: (x + y) % 2
+        // If the result is 0, it's one color; if 1, it's the other.
+        float colorValue = float((gridPos.x + gridPos.y) % 2);
+
+        vec4 color = vec4(vec3(colorValue), 1.0);
+        
+        imageStore(imgOutput, pixelCoords, color);
+    }
+}

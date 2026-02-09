@@ -96,6 +96,8 @@ VxTracer_EXTERNAL_OBJECTS =
 src/app/VxTracer: src/app/CMakeFiles/VxTracer.dir/main.cpp.o
 src/app/VxTracer: src/app/CMakeFiles/VxTracer.dir/build.make
 src/app/VxTracer: src/app/CMakeFiles/VxTracer.dir/compiler_depend.ts
+src/app/VxTracer: src/app/libengine.a
+src/app/VxTracer: src/renderer/libscreen_tex.a
 src/app/VxTracer: src/core/utils/libshader_tools.a
 src/app/VxTracer: src/platform/window/libwindow.a
 src/app/VxTracer: /usr/lib64/libglfw.so.3.4
