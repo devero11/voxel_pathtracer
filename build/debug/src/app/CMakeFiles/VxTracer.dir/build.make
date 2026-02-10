@@ -103,6 +103,7 @@ src/app/VxTracer: src/platform/window/libwindow.a
 src/app/VxTracer: /usr/lib64/libglfw.so.3.4
 src/app/VxTracer: libs/glad/libglad.a
 src/app/VxTracer: src/renderer/librender.a
+src/app/VxTracer: src/platform/input/libmouse.a
 src/app/VxTracer: src/core/utils/libshader_tools.a
 src/app/VxTracer: src/app/CMakeFiles/VxTracer.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable VxTracer"

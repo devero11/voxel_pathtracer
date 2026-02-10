@@ -54,6 +54,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("/home/devero11/voxel_pathtracer/build/debug/src/platform/input/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("/home/devero11/voxel_pathtracer/build/debug/libs/glad/cmake_install.cmake")
 endif()
 

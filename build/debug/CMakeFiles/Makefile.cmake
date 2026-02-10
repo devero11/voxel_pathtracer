@@ -14,6 +14,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/devero11/voxel_pathtracer/libs/glad/CMakeLists.txt"
   "/home/devero11/voxel_pathtracer/src/app/CMakeLists.txt"
   "/home/devero11/voxel_pathtracer/src/core/utils/CMakeLists.txt"
+  "/home/devero11/voxel_pathtracer/src/platform/input/CMakeLists.txt"
   "/home/devero11/voxel_pathtracer/src/platform/window/CMakeLists.txt"
   "/home/devero11/voxel_pathtracer/src/renderer/CMakeLists.txt"
   "/usr/lib64/cmake/glfw3/glfw3Config.cmake"
@@ -56,6 +57,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake/Modules/Platform/Linux-Initialize.cmake"
   "/usr/share/cmake/Modules/Platform/Linux.cmake"
   "/usr/share/cmake/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/cmake/glm/glmConfig.cmake"
+  "/usr/share/cmake/glm/glmConfigVersion.cmake"
   )
 
 # The corresponding makefile is:
@@ -69,6 +72,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/app/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/platform/window/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/platform/input/CMakeFiles/CMakeDirectoryInformation.cmake"
   "libs/glad/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/core/utils/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/renderer/CMakeFiles/CMakeDirectoryInformation.cmake"
@@ -79,6 +83,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/app/CMakeFiles/VxTracer.dir/DependInfo.cmake"
   "src/app/CMakeFiles/engine.dir/DependInfo.cmake"
   "src/platform/window/CMakeFiles/window.dir/DependInfo.cmake"
+  "src/platform/input/CMakeFiles/mouse.dir/DependInfo.cmake"
   "libs/glad/CMakeFiles/glad.dir/DependInfo.cmake"
   "src/core/utils/CMakeFiles/shader_tools.dir/DependInfo.cmake"
   "src/renderer/CMakeFiles/render.dir/DependInfo.cmake"

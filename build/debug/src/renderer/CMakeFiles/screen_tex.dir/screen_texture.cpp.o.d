@@ -165,8 +165,4 @@ src/renderer/CMakeFiles/screen_tex.dir/screen_texture.cpp.o: \
  /usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h \
  /usr/include/c++/15/x86_64-redhat-linux/bits/c++io.h \
  /usr/include/c++/15/bits/fstream.tcc /usr/include/c++/15/iostream \
- /home/devero11/voxel_pathtracer/src/renderer/../core/utils/../../../libs/glad/glad.h \
- /usr/include/c++/15/vector /usr/include/c++/15/bits/stl_uninitialized.h \
- /usr/include/c++/15/bits/stl_vector.h \
- /usr/include/c++/15/bits/stl_bvector.h \
- /usr/include/c++/15/bits/vector.tcc
+ /home/devero11/voxel_pathtracer/src/renderer/../core/utils/../../../libs/glad/glad.h

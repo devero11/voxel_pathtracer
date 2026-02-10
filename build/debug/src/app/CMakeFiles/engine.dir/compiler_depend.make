@@ -3,6 +3,7 @@
 
 src/app/CMakeFiles/engine.dir/engine.cpp.o: /home/devero11/voxel_pathtracer/src/app/engine.cpp \
   /home/devero11/voxel_pathtracer/libs/glad/glad.h \
+  /home/devero11/voxel_pathtracer/src/platform/input/mouse.h \
   /home/devero11/voxel_pathtracer/libs/glad/glad.h \
   /home/devero11/voxel_pathtracer/src/platform/window/window.h \
   /home/devero11/voxel_pathtracer/libs/glad/glad.h \
@@ -391,6 +392,10 @@ src/app/CMakeFiles/engine.dir/engine.cpp.o: /home/devero11/voxel_pathtracer/src/
 
 /usr/include/c++/15/bits/ostream.tcc:
 
+/usr/include/c++/15/fstream:
+
+/usr/include/c++/15/bits/ostream.h:
+
 /usr/include/bits/types/__locale_t.h:
 
 /usr/include/c++/15/x86_64-redhat-linux/bits/atomic_word.h:
@@ -467,15 +472,15 @@ src/app/CMakeFiles/engine.dir/engine.cpp.o: /home/devero11/voxel_pathtracer/src/
 
 /usr/include/bits/libc-header-start.h:
 
-/usr/include/bits/types/clock_t.h:
+/usr/include/c++/15/x86_64-redhat-linux/bits/gthr.h:
 
-/usr/include/bits/types/__fpos_t.h:
+/usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h:
 
-/usr/include/c++/15/bits/uses_allocator.h:
+/usr/include/c++/15/type_traits:
 
-/usr/include/c++/15/bits/new_allocator.h:
+/usr/include/c++/15/bits/refwrap.h:
 
-/usr/include/asm-generic/errno.h:
+/usr/include/bits/floatn.h:
 
 /usr/include/c++/15/bits/utility.h:
 
@@ -489,6 +494,12 @@ src/app/CMakeFiles/engine.dir/engine.cpp.o: /home/devero11/voxel_pathtracer/src/
 
 /home/devero11/voxel_pathtracer/src/renderer/render.h:
 
+/usr/include/c++/15/bits/uses_allocator.h:
+
+/usr/include/c++/15/bits/new_allocator.h:
+
+/usr/include/asm-generic/errno.h:
+
 /usr/include/bits/stdlib-float.h:
 
 /usr/include/bits/time64.h:
@@ -500,6 +511,10 @@ src/app/CMakeFiles/engine.dir/engine.cpp.o: /home/devero11/voxel_pathtracer/src/
 /usr/include/bits/setjmp.h:
 
 /usr/include/c++/15/bits/char_traits.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/include/bits/uintn-identity.h:
 
 /usr/include/stdc-predef.h:
 
@@ -547,16 +562,6 @@ src/app/CMakeFiles/engine.dir/engine.cpp.o: /home/devero11/voxel_pathtracer/src/
 
 /usr/include/bits/endianness.h:
 
-/usr/include/c++/15/x86_64-redhat-linux/bits/gthr.h:
-
-/usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h:
-
-/usr/include/c++/15/type_traits:
-
-/usr/include/c++/15/bits/refwrap.h:
-
-/usr/include/bits/floatn.h:
-
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/asm-generic/types.h:
@@ -568,10 +573,6 @@ src/app/CMakeFiles/engine.dir/engine.cpp.o: /home/devero11/voxel_pathtracer/src/
 /usr/include/c++/15/initializer_list:
 
 /usr/include/c++/15/bits/exception.h:
-
-/usr/include/bits/typesizes.h:
-
-/usr/include/bits/uintn-identity.h:
 
 /usr/include/bits/locale.h:
 
@@ -592,6 +593,10 @@ src/app/CMakeFiles/engine.dir/engine.cpp.o: /home/devero11/voxel_pathtracer/src/
 /usr/include/c++/15/x86_64-redhat-linux/bits/error_constants.h:
 
 /usr/include/bits/floatn-common.h:
+
+/usr/include/bits/types/__fpos_t.h:
+
+/usr/include/bits/types/clock_t.h:
 
 /usr/include/asm/posix_types.h:
 
@@ -616,6 +621,8 @@ src/app/CMakeFiles/engine.dir/engine.cpp.o: /home/devero11/voxel_pathtracer/src/
 /usr/include/c++/15/bits/basic_ios.h:
 
 /usr/include/bits/struct_rwlock.h:
+
+/home/devero11/voxel_pathtracer/src/platform/input/mouse.h:
 
 /usr/include/bits/types/struct_itimerspec.h:
 
@@ -674,10 +681,6 @@ src/app/CMakeFiles/engine.dir/engine.cpp.o: /home/devero11/voxel_pathtracer/src/
 /usr/include/c++/15/bits/basic_ios.tcc:
 
 /usr/include/c++/15/bits/basic_string.tcc:
-
-/usr/include/c++/15/fstream:
-
-/usr/include/c++/15/bits/ostream.h:
 
 /usr/include/asm/bitsperlong.h:
 

@@ -254,6 +254,7 @@ src/app/CMakeFiles/VxTracer.dir/main.cpp.o: /home/devero11/voxel_pathtracer/src/
 
 src/app/VxTracer: libs/glad/libglad.a \
   src/core/utils/libshader_tools.a \
+  src/platform/input/libmouse.a \
   src/platform/window/libwindow.a \
   src/renderer/librender.a \
   src/renderer/libscreen_tex.a \
@@ -289,6 +290,8 @@ src/app/libengine.a:
 /usr/lib64/libm.so:
 
 /usr/lib64/crt1.o:
+
+/lib64/libmvec.so.1:
 
 /usr/include/c++/15/bits/move.h:
 
@@ -534,8 +537,6 @@ src/platform/window/libwindow.a:
 
 /usr/include/bits/long-double.h:
 
-/usr/include/bits/pthread_stack_min-dynamic.h:
-
 /usr/include/c++/15/iostream:
 
 /usr/include/bits/pthreadtypes-arch.h:
@@ -545,8 +546,6 @@ src/platform/window/libwindow.a:
 /usr/include/gnu/stubs.h:
 
 /usr/include/bits/pthreadtypes.h:
-
-/lib64/libmvec.so.1:
 
 /usr/include/bits/types/cookie_io_functions_t.h:
 
@@ -799,6 +798,10 @@ src/app/CMakeFiles/VxTracer.dir/main.cpp.o:
 /usr/include/bits/wordsize.h:
 
 /usr/include/stdio.h:
+
+/usr/include/bits/pthread_stack_min-dynamic.h:
+
+src/platform/input/libmouse.a:
 
 /usr/include/stdlib.h:
 

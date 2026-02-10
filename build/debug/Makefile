@@ -163,6 +163,19 @@ window/fast:
 .PHONY : window/fast
 
 #=============================================================================
+# Target rules for targets named mouse
+
+# Build rule for target.
+mouse: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mouse
+.PHONY : mouse
+
+# fast build rule for target.
+mouse/fast:
+	$(MAKE) $(MAKESILENT) -f src/platform/input/CMakeFiles/mouse.dir/build.make src/platform/input/CMakeFiles/mouse.dir/build
+.PHONY : mouse/fast
+
+#=============================================================================
 # Target rules for targets named glad
 
 # Build rule for target.
@@ -226,6 +239,7 @@ help:
 	@echo "... VxTracer"
 	@echo "... engine"
 	@echo "... glad"
+	@echo "... mouse"
 	@echo "... render"
 	@echo "... screen_tex"
 	@echo "... shader_tools"

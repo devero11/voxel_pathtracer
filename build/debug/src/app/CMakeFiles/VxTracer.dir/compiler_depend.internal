@@ -256,6 +256,7 @@ src/app/CMakeFiles/VxTracer.dir/main.cpp.o
 src/app/VxTracer
  /home/devero11/voxel_pathtracer/build/debug/libs/glad/libglad.a
  /home/devero11/voxel_pathtracer/build/debug/src/core/utils/libshader_tools.a
+ /home/devero11/voxel_pathtracer/build/debug/src/platform/input/libmouse.a
  /home/devero11/voxel_pathtracer/build/debug/src/platform/window/libwindow.a
  /home/devero11/voxel_pathtracer/build/debug/src/renderer/librender.a
  /home/devero11/voxel_pathtracer/build/debug/src/renderer/libscreen_tex.a

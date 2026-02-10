@@ -7,6 +7,9 @@
 /home/devero11/voxel_pathtracer/build/debug/src/platform/window/CMakeFiles/window.dir
 /home/devero11/voxel_pathtracer/build/debug/src/platform/window/CMakeFiles/edit_cache.dir
 /home/devero11/voxel_pathtracer/build/debug/src/platform/window/CMakeFiles/rebuild_cache.dir
+/home/devero11/voxel_pathtracer/build/debug/src/platform/input/CMakeFiles/mouse.dir
+/home/devero11/voxel_pathtracer/build/debug/src/platform/input/CMakeFiles/edit_cache.dir
+/home/devero11/voxel_pathtracer/build/debug/src/platform/input/CMakeFiles/rebuild_cache.dir
 /home/devero11/voxel_pathtracer/build/debug/libs/glad/CMakeFiles/glad.dir
 /home/devero11/voxel_pathtracer/build/debug/libs/glad/CMakeFiles/edit_cache.dir
 /home/devero11/voxel_pathtracer/build/debug/libs/glad/CMakeFiles/rebuild_cache.dir

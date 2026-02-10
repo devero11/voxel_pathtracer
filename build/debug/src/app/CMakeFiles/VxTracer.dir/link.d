@@ -10,6 +10,7 @@ VxTracer: \
   /usr/lib64/libglfw.so.3.4 \
   ../../libs/glad/libglad.a \
   ../renderer/librender.a \
+  ../platform/input/libmouse.a \
   ../core/utils/libshader_tools.a \
   /usr/lib/gcc/x86_64-redhat-linux/15/libstdc++.so \
   /usr/lib/gcc/x86_64-redhat-linux/15/../../../../lib64/libm.so \
@@ -60,6 +61,8 @@ libengine.a:
 ../../libs/glad/libglad.a:
 
 ../renderer/librender.a:
+
+../platform/input/libmouse.a:
 
 ../core/utils/libshader_tools.a:
 

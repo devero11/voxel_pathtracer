@@ -4,6 +4,7 @@
 src/app/CMakeFiles/engine.dir/engine.cpp.o
  /home/devero11/voxel_pathtracer/src/app/engine.cpp
  /home/devero11/voxel_pathtracer/libs/glad/glad.h
+ /home/devero11/voxel_pathtracer/src/platform/input/mouse.h
  /home/devero11/voxel_pathtracer/libs/glad/glad.h
  /home/devero11/voxel_pathtracer/src/platform/window/window.h
  /home/devero11/voxel_pathtracer/libs/glad/glad.h

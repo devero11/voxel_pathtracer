@@ -171,4 +171,5 @@ src/app/CMakeFiles/engine.dir/engine.cpp.o: \
  /home/devero11/voxel_pathtracer/src/app/../renderer/screen_texture.h \
  /home/devero11/voxel_pathtracer/src/app/../platform/window/window.h \
  /home/devero11/voxel_pathtracer/src/app/../platform/window/../../../libs/glad/glad.h \
- /usr/include/GLFW/glfw3.h
+ /usr/include/GLFW/glfw3.h \
+ /home/devero11/voxel_pathtracer/src/app/../platform/input/mouse.h
