@@ -1,2 +1,0 @@
-/usr/bin/ar qc libscreen_tex.a CMakeFiles/screen_tex.dir/screen_texture.cpp.o
-/usr/bin/ranlib libscreen_tex.a

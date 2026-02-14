@@ -1,2 +1,0 @@
-/usr/bin/ar qc libshadertools.a CMakeFiles/shadertools.dir/shader_tools.cpp.o
-/usr/bin/ranlib libshadertools.a

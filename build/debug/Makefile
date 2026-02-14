@@ -120,6 +120,7 @@ preinstall/fast:
 
 # clear depends
 depend:
+	$(CMAKE_COMMAND) -P /home/devero11/voxel_pathtracer/build/debug/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
@@ -133,99 +134,320 @@ VxTracer: cmake_check_build_system
 
 # fast build rule for target.
 VxTracer/fast:
-	$(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/VxTracer.dir/build.make src/app/CMakeFiles/VxTracer.dir/build
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/build
 .PHONY : VxTracer/fast
 
-#=============================================================================
-# Target rules for targets named engine
+libs/glad/glad.o: libs/glad/glad.c.o
+.PHONY : libs/glad/glad.o
 
-# Build rule for target.
-engine: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 engine
-.PHONY : engine
+# target to build an object file
+libs/glad/glad.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/libs/glad/glad.c.o
+.PHONY : libs/glad/glad.c.o
 
-# fast build rule for target.
-engine/fast:
-	$(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/engine.dir/build.make src/app/CMakeFiles/engine.dir/build
-.PHONY : engine/fast
+libs/glad/glad.i: libs/glad/glad.c.i
+.PHONY : libs/glad/glad.i
 
-#=============================================================================
-# Target rules for targets named window
+# target to preprocess a source file
+libs/glad/glad.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/libs/glad/glad.c.i
+.PHONY : libs/glad/glad.c.i
 
-# Build rule for target.
-window: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 window
-.PHONY : window
+libs/glad/glad.s: libs/glad/glad.c.s
+.PHONY : libs/glad/glad.s
 
-# fast build rule for target.
-window/fast:
-	$(MAKE) $(MAKESILENT) -f src/platform/window/CMakeFiles/window.dir/build.make src/platform/window/CMakeFiles/window.dir/build
-.PHONY : window/fast
+# target to generate assembly for a file
+libs/glad/glad.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/libs/glad/glad.c.s
+.PHONY : libs/glad/glad.c.s
 
-#=============================================================================
-# Target rules for targets named mouse
+src/app/engine.o: src/app/engine.cpp.o
+.PHONY : src/app/engine.o
 
-# Build rule for target.
-mouse: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mouse
-.PHONY : mouse
+# target to build an object file
+src/app/engine.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/app/engine.cpp.o
+.PHONY : src/app/engine.cpp.o
 
-# fast build rule for target.
-mouse/fast:
-	$(MAKE) $(MAKESILENT) -f src/platform/input/CMakeFiles/mouse.dir/build.make src/platform/input/CMakeFiles/mouse.dir/build
-.PHONY : mouse/fast
+src/app/engine.i: src/app/engine.cpp.i
+.PHONY : src/app/engine.i
 
-#=============================================================================
-# Target rules for targets named glad
+# target to preprocess a source file
+src/app/engine.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/app/engine.cpp.i
+.PHONY : src/app/engine.cpp.i
 
-# Build rule for target.
-glad: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glad
-.PHONY : glad
+src/app/engine.s: src/app/engine.cpp.s
+.PHONY : src/app/engine.s
 
-# fast build rule for target.
-glad/fast:
-	$(MAKE) $(MAKESILENT) -f libs/glad/CMakeFiles/glad.dir/build.make libs/glad/CMakeFiles/glad.dir/build
-.PHONY : glad/fast
+# target to generate assembly for a file
+src/app/engine.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/app/engine.cpp.s
+.PHONY : src/app/engine.cpp.s
 
-#=============================================================================
-# Target rules for targets named shader_tools
+src/app/main.o: src/app/main.cpp.o
+.PHONY : src/app/main.o
 
-# Build rule for target.
-shader_tools: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 shader_tools
-.PHONY : shader_tools
+# target to build an object file
+src/app/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/app/main.cpp.o
+.PHONY : src/app/main.cpp.o
 
-# fast build rule for target.
-shader_tools/fast:
-	$(MAKE) $(MAKESILENT) -f src/core/utils/CMakeFiles/shader_tools.dir/build.make src/core/utils/CMakeFiles/shader_tools.dir/build
-.PHONY : shader_tools/fast
+src/app/main.i: src/app/main.cpp.i
+.PHONY : src/app/main.i
 
-#=============================================================================
-# Target rules for targets named render
+# target to preprocess a source file
+src/app/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/app/main.cpp.i
+.PHONY : src/app/main.cpp.i
 
-# Build rule for target.
-render: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 render
-.PHONY : render
+src/app/main.s: src/app/main.cpp.s
+.PHONY : src/app/main.s
 
-# fast build rule for target.
-render/fast:
-	$(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/render.dir/build.make src/renderer/CMakeFiles/render.dir/build
-.PHONY : render/fast
+# target to generate assembly for a file
+src/app/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/app/main.cpp.s
+.PHONY : src/app/main.cpp.s
 
-#=============================================================================
-# Target rules for targets named screen_tex
+src/blueprints/camera.o: src/blueprints/camera.cpp.o
+.PHONY : src/blueprints/camera.o
 
-# Build rule for target.
-screen_tex: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 screen_tex
-.PHONY : screen_tex
+# target to build an object file
+src/blueprints/camera.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/blueprints/camera.cpp.o
+.PHONY : src/blueprints/camera.cpp.o
 
-# fast build rule for target.
-screen_tex/fast:
-	$(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/screen_tex.dir/build.make src/renderer/CMakeFiles/screen_tex.dir/build
-.PHONY : screen_tex/fast
+src/blueprints/camera.i: src/blueprints/camera.cpp.i
+.PHONY : src/blueprints/camera.i
+
+# target to preprocess a source file
+src/blueprints/camera.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/blueprints/camera.cpp.i
+.PHONY : src/blueprints/camera.cpp.i
+
+src/blueprints/camera.s: src/blueprints/camera.cpp.s
+.PHONY : src/blueprints/camera.s
+
+# target to generate assembly for a file
+src/blueprints/camera.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/blueprints/camera.cpp.s
+.PHONY : src/blueprints/camera.cpp.s
+
+src/blueprints/voxel.o: src/blueprints/voxel.cpp.o
+.PHONY : src/blueprints/voxel.o
+
+# target to build an object file
+src/blueprints/voxel.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/blueprints/voxel.cpp.o
+.PHONY : src/blueprints/voxel.cpp.o
+
+src/blueprints/voxel.i: src/blueprints/voxel.cpp.i
+.PHONY : src/blueprints/voxel.i
+
+# target to preprocess a source file
+src/blueprints/voxel.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/blueprints/voxel.cpp.i
+.PHONY : src/blueprints/voxel.cpp.i
+
+src/blueprints/voxel.s: src/blueprints/voxel.cpp.s
+.PHONY : src/blueprints/voxel.s
+
+# target to generate assembly for a file
+src/blueprints/voxel.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/blueprints/voxel.cpp.s
+.PHONY : src/blueprints/voxel.cpp.s
+
+src/core/time.o: src/core/time.cpp.o
+.PHONY : src/core/time.o
+
+# target to build an object file
+src/core/time.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/core/time.cpp.o
+.PHONY : src/core/time.cpp.o
+
+src/core/time.i: src/core/time.cpp.i
+.PHONY : src/core/time.i
+
+# target to preprocess a source file
+src/core/time.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/core/time.cpp.i
+.PHONY : src/core/time.cpp.i
+
+src/core/time.s: src/core/time.cpp.s
+.PHONY : src/core/time.s
+
+# target to generate assembly for a file
+src/core/time.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/core/time.cpp.s
+.PHONY : src/core/time.cpp.s
+
+src/core/utils/shader_tools.o: src/core/utils/shader_tools.cpp.o
+.PHONY : src/core/utils/shader_tools.o
+
+# target to build an object file
+src/core/utils/shader_tools.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/core/utils/shader_tools.cpp.o
+.PHONY : src/core/utils/shader_tools.cpp.o
+
+src/core/utils/shader_tools.i: src/core/utils/shader_tools.cpp.i
+.PHONY : src/core/utils/shader_tools.i
+
+# target to preprocess a source file
+src/core/utils/shader_tools.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/core/utils/shader_tools.cpp.i
+.PHONY : src/core/utils/shader_tools.cpp.i
+
+src/core/utils/shader_tools.s: src/core/utils/shader_tools.cpp.s
+.PHONY : src/core/utils/shader_tools.s
+
+# target to generate assembly for a file
+src/core/utils/shader_tools.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/core/utils/shader_tools.cpp.s
+.PHONY : src/core/utils/shader_tools.cpp.s
+
+src/platform/input/keyboard.o: src/platform/input/keyboard.cpp.o
+.PHONY : src/platform/input/keyboard.o
+
+# target to build an object file
+src/platform/input/keyboard.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/platform/input/keyboard.cpp.o
+.PHONY : src/platform/input/keyboard.cpp.o
+
+src/platform/input/keyboard.i: src/platform/input/keyboard.cpp.i
+.PHONY : src/platform/input/keyboard.i
+
+# target to preprocess a source file
+src/platform/input/keyboard.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/platform/input/keyboard.cpp.i
+.PHONY : src/platform/input/keyboard.cpp.i
+
+src/platform/input/keyboard.s: src/platform/input/keyboard.cpp.s
+.PHONY : src/platform/input/keyboard.s
+
+# target to generate assembly for a file
+src/platform/input/keyboard.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/platform/input/keyboard.cpp.s
+.PHONY : src/platform/input/keyboard.cpp.s
+
+src/platform/input/mouse.o: src/platform/input/mouse.cpp.o
+.PHONY : src/platform/input/mouse.o
+
+# target to build an object file
+src/platform/input/mouse.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/platform/input/mouse.cpp.o
+.PHONY : src/platform/input/mouse.cpp.o
+
+src/platform/input/mouse.i: src/platform/input/mouse.cpp.i
+.PHONY : src/platform/input/mouse.i
+
+# target to preprocess a source file
+src/platform/input/mouse.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/platform/input/mouse.cpp.i
+.PHONY : src/platform/input/mouse.cpp.i
+
+src/platform/input/mouse.s: src/platform/input/mouse.cpp.s
+.PHONY : src/platform/input/mouse.s
+
+# target to generate assembly for a file
+src/platform/input/mouse.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/platform/input/mouse.cpp.s
+.PHONY : src/platform/input/mouse.cpp.s
+
+src/platform/window/window.o: src/platform/window/window.cpp.o
+.PHONY : src/platform/window/window.o
+
+# target to build an object file
+src/platform/window/window.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/platform/window/window.cpp.o
+.PHONY : src/platform/window/window.cpp.o
+
+src/platform/window/window.i: src/platform/window/window.cpp.i
+.PHONY : src/platform/window/window.i
+
+# target to preprocess a source file
+src/platform/window/window.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/platform/window/window.cpp.i
+.PHONY : src/platform/window/window.cpp.i
+
+src/platform/window/window.s: src/platform/window/window.cpp.s
+.PHONY : src/platform/window/window.s
+
+# target to generate assembly for a file
+src/platform/window/window.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/platform/window/window.cpp.s
+.PHONY : src/platform/window/window.cpp.s
+
+src/renderer/render.o: src/renderer/render.cpp.o
+.PHONY : src/renderer/render.o
+
+# target to build an object file
+src/renderer/render.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/renderer/render.cpp.o
+.PHONY : src/renderer/render.cpp.o
+
+src/renderer/render.i: src/renderer/render.cpp.i
+.PHONY : src/renderer/render.i
+
+# target to preprocess a source file
+src/renderer/render.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/renderer/render.cpp.i
+.PHONY : src/renderer/render.cpp.i
+
+src/renderer/render.s: src/renderer/render.cpp.s
+.PHONY : src/renderer/render.s
+
+# target to generate assembly for a file
+src/renderer/render.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/renderer/render.cpp.s
+.PHONY : src/renderer/render.cpp.s
+
+src/renderer/screen_texture.o: src/renderer/screen_texture.cpp.o
+.PHONY : src/renderer/screen_texture.o
+
+# target to build an object file
+src/renderer/screen_texture.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/renderer/screen_texture.cpp.o
+.PHONY : src/renderer/screen_texture.cpp.o
+
+src/renderer/screen_texture.i: src/renderer/screen_texture.cpp.i
+.PHONY : src/renderer/screen_texture.i
+
+# target to preprocess a source file
+src/renderer/screen_texture.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/renderer/screen_texture.cpp.i
+.PHONY : src/renderer/screen_texture.cpp.i
+
+src/renderer/screen_texture.s: src/renderer/screen_texture.cpp.s
+.PHONY : src/renderer/screen_texture.s
+
+# target to generate assembly for a file
+src/renderer/screen_texture.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/renderer/screen_texture.cpp.s
+.PHONY : src/renderer/screen_texture.cpp.s
+
+src/scenes/scene.o: src/scenes/scene.cpp.o
+.PHONY : src/scenes/scene.o
+
+# target to build an object file
+src/scenes/scene.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/scenes/scene.cpp.o
+.PHONY : src/scenes/scene.cpp.o
+
+src/scenes/scene.i: src/scenes/scene.cpp.i
+.PHONY : src/scenes/scene.i
+
+# target to preprocess a source file
+src/scenes/scene.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/scenes/scene.cpp.i
+.PHONY : src/scenes/scene.cpp.i
+
+src/scenes/scene.s: src/scenes/scene.cpp.s
+.PHONY : src/scenes/scene.s
+
+# target to generate assembly for a file
+src/scenes/scene.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/src/scenes/scene.cpp.s
+.PHONY : src/scenes/scene.cpp.s
 
 # Help Target
 help:
@@ -237,13 +459,45 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... VxTracer"
-	@echo "... engine"
-	@echo "... glad"
-	@echo "... mouse"
-	@echo "... render"
-	@echo "... screen_tex"
-	@echo "... shader_tools"
-	@echo "... window"
+	@echo "... libs/glad/glad.o"
+	@echo "... libs/glad/glad.i"
+	@echo "... libs/glad/glad.s"
+	@echo "... src/app/engine.o"
+	@echo "... src/app/engine.i"
+	@echo "... src/app/engine.s"
+	@echo "... src/app/main.o"
+	@echo "... src/app/main.i"
+	@echo "... src/app/main.s"
+	@echo "... src/blueprints/camera.o"
+	@echo "... src/blueprints/camera.i"
+	@echo "... src/blueprints/camera.s"
+	@echo "... src/blueprints/voxel.o"
+	@echo "... src/blueprints/voxel.i"
+	@echo "... src/blueprints/voxel.s"
+	@echo "... src/core/time.o"
+	@echo "... src/core/time.i"
+	@echo "... src/core/time.s"
+	@echo "... src/core/utils/shader_tools.o"
+	@echo "... src/core/utils/shader_tools.i"
+	@echo "... src/core/utils/shader_tools.s"
+	@echo "... src/platform/input/keyboard.o"
+	@echo "... src/platform/input/keyboard.i"
+	@echo "... src/platform/input/keyboard.s"
+	@echo "... src/platform/input/mouse.o"
+	@echo "... src/platform/input/mouse.i"
+	@echo "... src/platform/input/mouse.s"
+	@echo "... src/platform/window/window.o"
+	@echo "... src/platform/window/window.i"
+	@echo "... src/platform/window/window.s"
+	@echo "... src/renderer/render.o"
+	@echo "... src/renderer/render.i"
+	@echo "... src/renderer/render.s"
+	@echo "... src/renderer/screen_texture.o"
+	@echo "... src/renderer/screen_texture.i"
+	@echo "... src/renderer/screen_texture.s"
+	@echo "... src/scenes/scene.o"
+	@echo "... src/scenes/scene.i"
+	@echo "... src/scenes/scene.s"
 .PHONY : help
 
 
@@ -255,6 +509,7 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+	$(CMAKE_COMMAND) -P /home/devero11/voxel_pathtracer/build/debug/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

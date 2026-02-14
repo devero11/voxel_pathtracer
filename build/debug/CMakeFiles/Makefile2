@@ -63,422 +63,52 @@ CMAKE_BINARY_DIR = /home/devero11/voxel_pathtracer/build/debug
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: src/app/all
-all: src/platform/window/all
-all: src/platform/input/all
-all: libs/glad/all
-all: src/core/utils/all
-all: src/renderer/all
+all: CMakeFiles/VxTracer.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: src/app/codegen
-codegen: src/platform/window/codegen
-codegen: src/platform/input/codegen
-codegen: libs/glad/codegen
-codegen: src/core/utils/codegen
-codegen: src/renderer/codegen
+codegen: CMakeFiles/VxTracer.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
-preinstall: src/app/preinstall
-preinstall: src/platform/window/preinstall
-preinstall: src/platform/input/preinstall
-preinstall: libs/glad/preinstall
-preinstall: src/core/utils/preinstall
-preinstall: src/renderer/preinstall
+preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: src/app/clean
-clean: src/platform/window/clean
-clean: src/platform/input/clean
-clean: libs/glad/clean
-clean: src/core/utils/clean
-clean: src/renderer/clean
+clean: CMakeFiles/VxTracer.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory libs/glad
-
-# Recursive "all" directory target.
-libs/glad/all: libs/glad/CMakeFiles/glad.dir/all
-.PHONY : libs/glad/all
-
-# Recursive "codegen" directory target.
-libs/glad/codegen: libs/glad/CMakeFiles/glad.dir/codegen
-.PHONY : libs/glad/codegen
-
-# Recursive "preinstall" directory target.
-libs/glad/preinstall:
-.PHONY : libs/glad/preinstall
-
-# Recursive "clean" directory target.
-libs/glad/clean: libs/glad/CMakeFiles/glad.dir/clean
-.PHONY : libs/glad/clean
-
-#=============================================================================
-# Directory level rules for directory src/app
-
-# Recursive "all" directory target.
-src/app/all: src/app/CMakeFiles/VxTracer.dir/all
-src/app/all: src/app/CMakeFiles/engine.dir/all
-.PHONY : src/app/all
-
-# Recursive "codegen" directory target.
-src/app/codegen: src/app/CMakeFiles/VxTracer.dir/codegen
-src/app/codegen: src/app/CMakeFiles/engine.dir/codegen
-.PHONY : src/app/codegen
-
-# Recursive "preinstall" directory target.
-src/app/preinstall:
-.PHONY : src/app/preinstall
-
-# Recursive "clean" directory target.
-src/app/clean: src/app/CMakeFiles/VxTracer.dir/clean
-src/app/clean: src/app/CMakeFiles/engine.dir/clean
-.PHONY : src/app/clean
-
-#=============================================================================
-# Directory level rules for directory src/core/utils
-
-# Recursive "all" directory target.
-src/core/utils/all: src/core/utils/CMakeFiles/shader_tools.dir/all
-.PHONY : src/core/utils/all
-
-# Recursive "codegen" directory target.
-src/core/utils/codegen: src/core/utils/CMakeFiles/shader_tools.dir/codegen
-.PHONY : src/core/utils/codegen
-
-# Recursive "preinstall" directory target.
-src/core/utils/preinstall:
-.PHONY : src/core/utils/preinstall
-
-# Recursive "clean" directory target.
-src/core/utils/clean: src/core/utils/CMakeFiles/shader_tools.dir/clean
-.PHONY : src/core/utils/clean
-
-#=============================================================================
-# Directory level rules for directory src/platform/input
-
-# Recursive "all" directory target.
-src/platform/input/all: src/platform/input/CMakeFiles/mouse.dir/all
-.PHONY : src/platform/input/all
-
-# Recursive "codegen" directory target.
-src/platform/input/codegen: src/platform/input/CMakeFiles/mouse.dir/codegen
-.PHONY : src/platform/input/codegen
-
-# Recursive "preinstall" directory target.
-src/platform/input/preinstall:
-.PHONY : src/platform/input/preinstall
-
-# Recursive "clean" directory target.
-src/platform/input/clean: src/platform/input/CMakeFiles/mouse.dir/clean
-.PHONY : src/platform/input/clean
-
-#=============================================================================
-# Directory level rules for directory src/platform/window
-
-# Recursive "all" directory target.
-src/platform/window/all: src/platform/window/CMakeFiles/window.dir/all
-.PHONY : src/platform/window/all
-
-# Recursive "codegen" directory target.
-src/platform/window/codegen: src/platform/window/CMakeFiles/window.dir/codegen
-.PHONY : src/platform/window/codegen
-
-# Recursive "preinstall" directory target.
-src/platform/window/preinstall:
-.PHONY : src/platform/window/preinstall
-
-# Recursive "clean" directory target.
-src/platform/window/clean: src/platform/window/CMakeFiles/window.dir/clean
-.PHONY : src/platform/window/clean
-
-#=============================================================================
-# Directory level rules for directory src/renderer
-
-# Recursive "all" directory target.
-src/renderer/all: src/renderer/CMakeFiles/render.dir/all
-src/renderer/all: src/renderer/CMakeFiles/screen_tex.dir/all
-.PHONY : src/renderer/all
-
-# Recursive "codegen" directory target.
-src/renderer/codegen: src/renderer/CMakeFiles/render.dir/codegen
-src/renderer/codegen: src/renderer/CMakeFiles/screen_tex.dir/codegen
-.PHONY : src/renderer/codegen
-
-# Recursive "preinstall" directory target.
-src/renderer/preinstall:
-.PHONY : src/renderer/preinstall
-
-# Recursive "clean" directory target.
-src/renderer/clean: src/renderer/CMakeFiles/render.dir/clean
-src/renderer/clean: src/renderer/CMakeFiles/screen_tex.dir/clean
-.PHONY : src/renderer/clean
-
-#=============================================================================
-# Target rules for target src/app/CMakeFiles/VxTracer.dir
+# Target rules for target CMakeFiles/VxTracer.dir
 
 # All Build rule for target.
-src/app/CMakeFiles/VxTracer.dir/all: src/app/CMakeFiles/engine.dir/all
-src/app/CMakeFiles/VxTracer.dir/all: src/platform/window/CMakeFiles/window.dir/all
-src/app/CMakeFiles/VxTracer.dir/all: src/platform/input/CMakeFiles/mouse.dir/all
-src/app/CMakeFiles/VxTracer.dir/all: libs/glad/CMakeFiles/glad.dir/all
-src/app/CMakeFiles/VxTracer.dir/all: src/core/utils/CMakeFiles/shader_tools.dir/all
-src/app/CMakeFiles/VxTracer.dir/all: src/renderer/CMakeFiles/render.dir/all
-src/app/CMakeFiles/VxTracer.dir/all: src/renderer/CMakeFiles/screen_tex.dir/all
-	$(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/VxTracer.dir/build.make src/app/CMakeFiles/VxTracer.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/VxTracer.dir/build.make src/app/CMakeFiles/VxTracer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=1,2 "Built target VxTracer"
-.PHONY : src/app/CMakeFiles/VxTracer.dir/all
+CMakeFiles/VxTracer.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target VxTracer"
+.PHONY : CMakeFiles/VxTracer.dir/all
 
 # Build rule for subdir invocation for target.
-src/app/CMakeFiles/VxTracer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 16
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/app/CMakeFiles/VxTracer.dir/all
+CMakeFiles/VxTracer.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/VxTracer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 0
-.PHONY : src/app/CMakeFiles/VxTracer.dir/rule
+.PHONY : CMakeFiles/VxTracer.dir/rule
 
 # Convenience name for target.
-VxTracer: src/app/CMakeFiles/VxTracer.dir/rule
+VxTracer: CMakeFiles/VxTracer.dir/rule
 .PHONY : VxTracer
 
 # codegen rule for target.
-src/app/CMakeFiles/VxTracer.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/VxTracer.dir/build.make src/app/CMakeFiles/VxTracer.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=1,2 "Finished codegen for target VxTracer"
-.PHONY : src/app/CMakeFiles/VxTracer.dir/codegen
+CMakeFiles/VxTracer.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Finished codegen for target VxTracer"
+.PHONY : CMakeFiles/VxTracer.dir/codegen
 
 # clean rule for target.
-src/app/CMakeFiles/VxTracer.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/VxTracer.dir/build.make src/app/CMakeFiles/VxTracer.dir/clean
-.PHONY : src/app/CMakeFiles/VxTracer.dir/clean
-
-#=============================================================================
-# Target rules for target src/app/CMakeFiles/engine.dir
-
-# All Build rule for target.
-src/app/CMakeFiles/engine.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/engine.dir/build.make src/app/CMakeFiles/engine.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/engine.dir/build.make src/app/CMakeFiles/engine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=3,4 "Built target engine"
-.PHONY : src/app/CMakeFiles/engine.dir/all
-
-# Build rule for subdir invocation for target.
-src/app/CMakeFiles/engine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/app/CMakeFiles/engine.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 0
-.PHONY : src/app/CMakeFiles/engine.dir/rule
-
-# Convenience name for target.
-engine: src/app/CMakeFiles/engine.dir/rule
-.PHONY : engine
-
-# codegen rule for target.
-src/app/CMakeFiles/engine.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/engine.dir/build.make src/app/CMakeFiles/engine.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=3,4 "Finished codegen for target engine"
-.PHONY : src/app/CMakeFiles/engine.dir/codegen
-
-# clean rule for target.
-src/app/CMakeFiles/engine.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/app/CMakeFiles/engine.dir/build.make src/app/CMakeFiles/engine.dir/clean
-.PHONY : src/app/CMakeFiles/engine.dir/clean
-
-#=============================================================================
-# Target rules for target src/platform/window/CMakeFiles/window.dir
-
-# All Build rule for target.
-src/platform/window/CMakeFiles/window.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/platform/window/CMakeFiles/window.dir/build.make src/platform/window/CMakeFiles/window.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/platform/window/CMakeFiles/window.dir/build.make src/platform/window/CMakeFiles/window.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=15,16 "Built target window"
-.PHONY : src/platform/window/CMakeFiles/window.dir/all
-
-# Build rule for subdir invocation for target.
-src/platform/window/CMakeFiles/window.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/platform/window/CMakeFiles/window.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 0
-.PHONY : src/platform/window/CMakeFiles/window.dir/rule
-
-# Convenience name for target.
-window: src/platform/window/CMakeFiles/window.dir/rule
-.PHONY : window
-
-# codegen rule for target.
-src/platform/window/CMakeFiles/window.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f src/platform/window/CMakeFiles/window.dir/build.make src/platform/window/CMakeFiles/window.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=15,16 "Finished codegen for target window"
-.PHONY : src/platform/window/CMakeFiles/window.dir/codegen
-
-# clean rule for target.
-src/platform/window/CMakeFiles/window.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/platform/window/CMakeFiles/window.dir/build.make src/platform/window/CMakeFiles/window.dir/clean
-.PHONY : src/platform/window/CMakeFiles/window.dir/clean
-
-#=============================================================================
-# Target rules for target src/platform/input/CMakeFiles/mouse.dir
-
-# All Build rule for target.
-src/platform/input/CMakeFiles/mouse.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/platform/input/CMakeFiles/mouse.dir/build.make src/platform/input/CMakeFiles/mouse.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/platform/input/CMakeFiles/mouse.dir/build.make src/platform/input/CMakeFiles/mouse.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=7,8 "Built target mouse"
-.PHONY : src/platform/input/CMakeFiles/mouse.dir/all
-
-# Build rule for subdir invocation for target.
-src/platform/input/CMakeFiles/mouse.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/platform/input/CMakeFiles/mouse.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 0
-.PHONY : src/platform/input/CMakeFiles/mouse.dir/rule
-
-# Convenience name for target.
-mouse: src/platform/input/CMakeFiles/mouse.dir/rule
-.PHONY : mouse
-
-# codegen rule for target.
-src/platform/input/CMakeFiles/mouse.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f src/platform/input/CMakeFiles/mouse.dir/build.make src/platform/input/CMakeFiles/mouse.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=7,8 "Finished codegen for target mouse"
-.PHONY : src/platform/input/CMakeFiles/mouse.dir/codegen
-
-# clean rule for target.
-src/platform/input/CMakeFiles/mouse.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/platform/input/CMakeFiles/mouse.dir/build.make src/platform/input/CMakeFiles/mouse.dir/clean
-.PHONY : src/platform/input/CMakeFiles/mouse.dir/clean
-
-#=============================================================================
-# Target rules for target libs/glad/CMakeFiles/glad.dir
-
-# All Build rule for target.
-libs/glad/CMakeFiles/glad.dir/all:
-	$(MAKE) $(MAKESILENT) -f libs/glad/CMakeFiles/glad.dir/build.make libs/glad/CMakeFiles/glad.dir/depend
-	$(MAKE) $(MAKESILENT) -f libs/glad/CMakeFiles/glad.dir/build.make libs/glad/CMakeFiles/glad.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=5,6 "Built target glad"
-.PHONY : libs/glad/CMakeFiles/glad.dir/all
-
-# Build rule for subdir invocation for target.
-libs/glad/CMakeFiles/glad.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libs/glad/CMakeFiles/glad.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 0
-.PHONY : libs/glad/CMakeFiles/glad.dir/rule
-
-# Convenience name for target.
-glad: libs/glad/CMakeFiles/glad.dir/rule
-.PHONY : glad
-
-# codegen rule for target.
-libs/glad/CMakeFiles/glad.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f libs/glad/CMakeFiles/glad.dir/build.make libs/glad/CMakeFiles/glad.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=5,6 "Finished codegen for target glad"
-.PHONY : libs/glad/CMakeFiles/glad.dir/codegen
-
-# clean rule for target.
-libs/glad/CMakeFiles/glad.dir/clean:
-	$(MAKE) $(MAKESILENT) -f libs/glad/CMakeFiles/glad.dir/build.make libs/glad/CMakeFiles/glad.dir/clean
-.PHONY : libs/glad/CMakeFiles/glad.dir/clean
-
-#=============================================================================
-# Target rules for target src/core/utils/CMakeFiles/shader_tools.dir
-
-# All Build rule for target.
-src/core/utils/CMakeFiles/shader_tools.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/core/utils/CMakeFiles/shader_tools.dir/build.make src/core/utils/CMakeFiles/shader_tools.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/core/utils/CMakeFiles/shader_tools.dir/build.make src/core/utils/CMakeFiles/shader_tools.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=13,14 "Built target shader_tools"
-.PHONY : src/core/utils/CMakeFiles/shader_tools.dir/all
-
-# Build rule for subdir invocation for target.
-src/core/utils/CMakeFiles/shader_tools.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/core/utils/CMakeFiles/shader_tools.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 0
-.PHONY : src/core/utils/CMakeFiles/shader_tools.dir/rule
-
-# Convenience name for target.
-shader_tools: src/core/utils/CMakeFiles/shader_tools.dir/rule
-.PHONY : shader_tools
-
-# codegen rule for target.
-src/core/utils/CMakeFiles/shader_tools.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f src/core/utils/CMakeFiles/shader_tools.dir/build.make src/core/utils/CMakeFiles/shader_tools.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=13,14 "Finished codegen for target shader_tools"
-.PHONY : src/core/utils/CMakeFiles/shader_tools.dir/codegen
-
-# clean rule for target.
-src/core/utils/CMakeFiles/shader_tools.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/core/utils/CMakeFiles/shader_tools.dir/build.make src/core/utils/CMakeFiles/shader_tools.dir/clean
-.PHONY : src/core/utils/CMakeFiles/shader_tools.dir/clean
-
-#=============================================================================
-# Target rules for target src/renderer/CMakeFiles/render.dir
-
-# All Build rule for target.
-src/renderer/CMakeFiles/render.dir/all: src/core/utils/CMakeFiles/shader_tools.dir/all
-	$(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/render.dir/build.make src/renderer/CMakeFiles/render.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/render.dir/build.make src/renderer/CMakeFiles/render.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=9,10 "Built target render"
-.PHONY : src/renderer/CMakeFiles/render.dir/all
-
-# Build rule for subdir invocation for target.
-src/renderer/CMakeFiles/render.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/renderer/CMakeFiles/render.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 0
-.PHONY : src/renderer/CMakeFiles/render.dir/rule
-
-# Convenience name for target.
-render: src/renderer/CMakeFiles/render.dir/rule
-.PHONY : render
-
-# codegen rule for target.
-src/renderer/CMakeFiles/render.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/render.dir/build.make src/renderer/CMakeFiles/render.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=9,10 "Finished codegen for target render"
-.PHONY : src/renderer/CMakeFiles/render.dir/codegen
-
-# clean rule for target.
-src/renderer/CMakeFiles/render.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/render.dir/build.make src/renderer/CMakeFiles/render.dir/clean
-.PHONY : src/renderer/CMakeFiles/render.dir/clean
-
-#=============================================================================
-# Target rules for target src/renderer/CMakeFiles/screen_tex.dir
-
-# All Build rule for target.
-src/renderer/CMakeFiles/screen_tex.dir/all: src/core/utils/CMakeFiles/shader_tools.dir/all
-	$(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/screen_tex.dir/build.make src/renderer/CMakeFiles/screen_tex.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/screen_tex.dir/build.make src/renderer/CMakeFiles/screen_tex.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=11,12 "Built target screen_tex"
-.PHONY : src/renderer/CMakeFiles/screen_tex.dir/all
-
-# Build rule for subdir invocation for target.
-src/renderer/CMakeFiles/screen_tex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/renderer/CMakeFiles/screen_tex.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/devero11/voxel_pathtracer/build/debug/CMakeFiles 0
-.PHONY : src/renderer/CMakeFiles/screen_tex.dir/rule
-
-# Convenience name for target.
-screen_tex: src/renderer/CMakeFiles/screen_tex.dir/rule
-.PHONY : screen_tex
-
-# codegen rule for target.
-src/renderer/CMakeFiles/screen_tex.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/screen_tex.dir/build.make src/renderer/CMakeFiles/screen_tex.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/devero11/voxel_pathtracer/build/debug/CMakeFiles --progress-num=11,12 "Finished codegen for target screen_tex"
-.PHONY : src/renderer/CMakeFiles/screen_tex.dir/codegen
-
-# clean rule for target.
-src/renderer/CMakeFiles/screen_tex.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/renderer/CMakeFiles/screen_tex.dir/build.make src/renderer/CMakeFiles/screen_tex.dir/clean
-.PHONY : src/renderer/CMakeFiles/screen_tex.dir/clean
+CMakeFiles/VxTracer.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VxTracer.dir/build.make CMakeFiles/VxTracer.dir/clean
+.PHONY : CMakeFiles/VxTracer.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
@@ -487,6 +117,7 @@ src/renderer/CMakeFiles/screen_tex.dir/clean:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
+	$(CMAKE_COMMAND) -P /home/devero11/voxel_pathtracer/build/debug/CMakeFiles/VerifyGlobs.cmake
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
