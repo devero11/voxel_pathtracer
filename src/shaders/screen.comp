@@ -44,17 +44,52 @@ vec3 randomSphere(uint seed) {
   float s = sqrt(1.0 - u * u);
   return vec3(s * cos(v), s * sin(v), u);
 }
+
+vec2 rayBoxIntersection(vec3 ro, vec3 rd, vec3 boxMin, vec3 boxMax) {
+    vec3 t0 = (boxMin - ro) / rd;
+    vec3 t1 = (boxMax - ro) / rd;
+    vec3 tmin = min(t0, t1);
+    vec3 tmax = max(t0, t1);
+    
+    float dstA = max(max(tmin.x, tmin.y), tmin.z);
+    float dstB = min(min(tmax.x, tmax.y), tmax.z);
+    
+    // Case 1: Ray misses box (dstA > dstB)
+    // Case 2: Box is behind ray (dstB < 0)
+    return vec2(dstA, dstB);
+}
+
+
+
 vec4 calculateLight(vec3 initialDir, vec3 initialPos, uint resample) {
     uint baseSeed = uint(gl_GlobalInvocationID.x + gl_GlobalInvocationID.y * 2048u); // Use a number larger than your width
 
-    uint seed = pcg_hash(baseSeed + pcg_hash(uint(u_frame_count+resample)));
+    uint seed = pcg_hash(baseSeed + pcg_hash(uint(u_frame_count)) + pcg_hash(uint(resample)));
     vec3 currentPos = initialPos;
     
     vec3 dir = initialDir;
     vec3 throughput = vec3(1.0);
     vec3 finalColor = vec3(0.0);
 
-    for(int bounce = 0; bounce < 4; bounce++) {
+
+    vec3 boxMin = vec3(0.0);
+    vec3 boxMax = vec3(4.0, 4.0, 4.0); // Adjust to your actual chunk size
+
+    vec2 intersect = rayBoxIntersection(initialPos, dir, boxMin, boxMax);
+    float tNear = intersect.x;
+    float tFar = intersect.y;
+
+    // 1. If we miss the box or it's behind us, return background color
+    if (tNear > tFar || tFar < 0.0) {
+        finalColor = vec3(0.1,0.1,0.25) * (1+dot(dir, vec3(0,1,0))) * throughput; 
+        return vec4(finalColor, 1.0);
+    }
+    if (tNear > 0.0) {
+        currentPos = initialPos + dir * (tNear - 0.001);
+    } else {
+        currentPos = initialPos; // Already inside
+    }
+    for(int bounce = 0; bounce <8; bounce++) {
         ivec3 mapPos = ivec3(floor(currentPos));
         ivec3 rayStep = ivec3(sign(dir));
         vec3 deltaDist = abs(1.0 / (dir + 1e-30));
@@ -63,6 +98,9 @@ vec4 calculateLight(vec3 initialDir, vec3 initialPos, uint resample) {
         vec3 normal = vec3(0.0);
         int lastStepAxis = 0;
         bool hitAnything = false;
+
+
+
 
         // DDA Loop
         for(int i = 0; i < 100; i++) {
@@ -83,6 +121,13 @@ vec4 calculateLight(vec3 initialDir, vec3 initialPos, uint resample) {
                 normal = vec3(0, 0, -rayStep.z);
                 lastStepAxis = 2;
             }
+
+            float currentDist = (lastStepAxis == 0) ? (sideDist.x - deltaDist.x) : 
+                        (lastStepAxis == 1) ? (sideDist.y - deltaDist.y) : 
+                        (sideDist.z - deltaDist.z);
+
+            if (currentDist > tFar) break;
+
 
             vec3 uvw = (vec3(mapPos) + 0.5) / vec3(4,4,4);
 
@@ -124,7 +169,7 @@ vec4 calculateLight(vec3 initialDir, vec3 initialPos, uint resample) {
         }
 
         if(!hitAnything) {
-            finalColor = vec3(0) * throughput; 
+            finalColor = vec3(0.1,0.1,0.25) * (1+dot(dir, vec3(0,1,0))) * throughput; 
             return vec4(finalColor, 1.0);
         }
     }
@@ -152,9 +197,13 @@ void main() {
     vec3 currentPos = camPos;
     vec3 dir = finalDir; 
 
-    vec4 color = vec4(0,0,0,1); 
-    
-    for(int i = 0; i<1;i++){
+    vec4 color = vec4(0,0,0f,1); 
+    int resamples = 1;
+    if (u_frame_count <= 1) {
+       imageStore(acumulator, pixelCoords, vec4(0,0,0, 1.0));
+       resamples = 10;
+    }
+    for(int i = 0; i<resamples;i++){
       color +=  calculateLight(dir, currentPos, i); 
     }
 
@@ -165,10 +214,17 @@ void main() {
     vec4 previousSum = imageLoad(acumulator, pixelCoords);
 
     vec3 currentSum = previousSum.rgb + color.rgb;
-    imageStore(acumulator, pixelCoords, vec4(currentSum,1));
-
-    vec3 averageColor = currentSum.rgb / float(u_frame_count);
     
+
+    vec3 averageColor = currentSum.rgb / float(u_frame_count*resamples);
+ 
+    if(u_frame_count > 1)
+      imageStore(acumulator, pixelCoords, vec4(currentSum,1));
+    else
+      imageStore(acumulator, pixelCoords,vec4(averageColor,1));
+
+
+   
     averageColor = pow(averageColor, vec3(1.0 / 2.2));
 
     imageStore(imgOutput, pixelCoords, vec4(averageColor, 1.0));
