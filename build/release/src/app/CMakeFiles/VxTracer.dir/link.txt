@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -DNDEBUG -Wl,--dependency-file=CMakeFiles/VxTracer.dir/link.d CMakeFiles/VxTracer.dir/main.cpp.o -o VxTracer  /usr/lib64/libglfw.so.3.4 ../../libs/glad/libglad.a

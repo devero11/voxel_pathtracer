@@ -1,25 +1,182 @@
 #version 430
 layout(local_size_x = 16, local_size_y = 16) in;
 
-layout(rgba8, binding = 0) writeonly uniform image2D imgOutput;
+layout(rgba8, binding = 0) uniform image2D imgOutput;
+
+layout(binding = 1) uniform usampler3D chunk_data;
+
+layout(rgba32f, binding = 2) coherent uniform image2D acumulator;
+
+uniform vec3 camPos;
+uniform vec3 camForward;
+
+uniform vec3 Horizontal; 
+uniform vec3 Vertical;
+
+uniform int u_frame_count;
+
+
+float intensity = 10;
+vec3 lightColor = vec3(1,1,1);
+
+vec3 voxelColor = vec3(1,1,1);
+
+vec3 voxelColor2 = vec3(1,0,0);
+
+vec3 voxelColor3 = vec3(0,1,0);
+
+
+uint pcg_hash(uint v) {
+    uint state = v * 747796405u + 2891336453u;
+    uint word = ((state >> ((state >> 28u) + 4u)) ^ state) * 277803737u;
+    return (word >> 22u) ^ word;
+}
+float hash(uint x) {
+  x = ((x >> 16) ^ x) * 0x45d9f3b;
+  x = ((x >> 16) ^ x) * 0x45d9f3b;
+  x = (x >> 16) ^ x;
+  return float(x) / 4294967295.0;
+}
+
+vec3 randomSphere(uint seed) {
+  float u = hash(seed) * 2.0 - 1.0;
+  float v = hash(seed + 12345u) * 6.283185; // 2 * PI
+  float s = sqrt(1.0 - u * u);
+  return vec3(s * cos(v), s * sin(v), u);
+}
+vec4 calculateLight(vec3 initialDir, vec3 initialPos, uint resample) {
+    uint baseSeed = uint(gl_GlobalInvocationID.x + gl_GlobalInvocationID.y * 2048u); // Use a number larger than your width
+
+    uint seed = pcg_hash(baseSeed + pcg_hash(uint(u_frame_count+resample)));
+    vec3 currentPos = initialPos;
+    
+    vec3 dir = initialDir;
+    vec3 throughput = vec3(1.0);
+    vec3 finalColor = vec3(0.0);
+
+    for(int bounce = 0; bounce < 4; bounce++) {
+        ivec3 mapPos = ivec3(floor(currentPos));
+        ivec3 rayStep = ivec3(sign(dir));
+        vec3 deltaDist = abs(1.0 / (dir + 1e-30));
+        vec3 sideDist = (rayStep * (vec3(mapPos) - currentPos) + (rayStep * 0.5) + 0.5) * deltaDist;
+        
+        vec3 normal = vec3(0.0);
+        int lastStepAxis = 0;
+        bool hitAnything = false;
+
+        // DDA Loop
+        for(int i = 0; i < 100; i++) {
+            // STEP FIRST, then check (or initialize mapPos carefully)
+            if(sideDist.x < sideDist.y && sideDist.x < sideDist.z) {
+                sideDist.x += deltaDist.x;
+                mapPos.x += rayStep.x;
+                normal = vec3(-rayStep.x, 0, 0);
+                lastStepAxis = 0;
+            } else if(sideDist.y < sideDist.z) {
+                sideDist.y += deltaDist.y;
+                mapPos.y += rayStep.y;
+                normal = vec3(0, -rayStep.y, 0);
+                lastStepAxis = 1;
+            } else {
+                sideDist.z += deltaDist.z;
+                mapPos.z += rayStep.z;
+                normal = vec3(0, 0, -rayStep.z);
+                lastStepAxis = 2;
+            }
+
+            vec3 uvw = (vec3(mapPos) + 0.5) / vec3(4,4,4);
+
+            uint voxel = texture(chunk_data, uvw).r;
+//            float voxel = imageLoad(chunk_data, mapPos).r;
+
+            vec3 currentCol = voxelColor;
+            if(voxel == 2)
+              currentCol = voxelColor2;
+            if(voxel==3) currentCol = voxelColor3;
+            if(voxel >=1 && voxel < 10) { 
+                float dist = (lastStepAxis == 0) ? (sideDist.x - deltaDist.x) : (lastStepAxis == 1) ? (sideDist.y - deltaDist.y) : (sideDist.z - deltaDist.z);
+                currentPos = currentPos + dir * dist + normal * 0.001; 
+                
+                vec3 randVec = randomSphere(seed); 
+                  
+
+                if(voxel == 3)
+                  dir = normalize(reflect(dir,normal));
+                else 
+                  dir = normalize(normal + randVec);
+                throughput *= currentCol; 
+                hitAnything = true;
+                break; 
+            }
+            
+            if(voxel == 10.0) { 
+
+                finalColor = lightColor * intensity * throughput;
+                return vec4(finalColor, 1.0);
+            }
+             if(voxel == 11.0) { 
+               lightColor = vec3(1f,1f,0);
+                 intensity = 5;
+                finalColor = lightColor * intensity * throughput;
+                return vec4(finalColor, 1.0);
+            }
+            
+        }
+
+        if(!hitAnything) {
+            finalColor = vec3(0) * throughput; 
+            return vec4(finalColor, 1.0);
+        }
+    }
+    return vec4(finalColor, 1.0);
+}
 
 void main() {
     ivec2 pixelCoords = ivec2(gl_GlobalInvocationID.xy);
     ivec2 size = imageSize(imgOutput);
 
-    if (pixelCoords.x < size.x && pixelCoords.y < size.y) {
-        // Define the size of each checker square (e.g., 32x32 pixels)
-        int squareSize = 32;
+    if (pixelCoords.x >= size.x || pixelCoords.y >= size.y) return;
 
-        // Determine which "grid cell" this pixel belongs to
-        ivec2 gridPos = pixelCoords / squareSize;
+    vec2 uv = (vec2(pixelCoords) + 0.5) / vec2(size);
+    vec2 offset = uv - 0.5;
+    
+    float offsetX = offset.x;
+    float offsetY = -offset.y; 
 
-        // Checker logic: (x + y) % 2
-        // If the result is 0, it's one color; if 1, it's the other.
-        float colorValue = float((gridPos.x + gridPos.y) % 2);
+    vec3 rayDir = camForward + (offsetX * Horizontal) + (offsetY * Vertical);
 
-        vec4 color = vec4(vec3(colorValue), 1.0);
-        
-        imageStore(imgOutput, pixelCoords, color);
+    vec3 finalDir = normalize(rayDir);
+    
+
+
+    vec3 currentPos = camPos;
+    vec3 dir = finalDir; 
+
+    vec4 color = vec4(0,0,0,1); 
+    
+    for(int i = 0; i<1;i++){
+      color +=  calculateLight(dir, currentPos, i); 
     }
+
+    if (u_frame_count <= 1) {
+        imageStore(acumulator, pixelCoords, vec4(0,0,0, 1.0));
+      }
+    
+    vec4 previousSum = imageLoad(acumulator, pixelCoords);
+
+    vec3 currentSum = previousSum.rgb + color.rgb;
+    imageStore(acumulator, pixelCoords, vec4(currentSum,1));
+
+    vec3 averageColor = currentSum.rgb / float(u_frame_count);
+    
+    averageColor = pow(averageColor, vec3(1.0 / 2.2));
+
+    imageStore(imgOutput, pixelCoords, vec4(averageColor, 1.0));
+
+
+
 }
+
+
+
+

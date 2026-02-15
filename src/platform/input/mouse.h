@@ -7,5 +7,5 @@
 namespace mouse {
   extern glm::vec2 direction;  
 
-  void lock(GLFWwindow* window); 
+  void setup(GLFWwindow* window); 
 }

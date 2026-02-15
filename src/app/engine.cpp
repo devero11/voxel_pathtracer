@@ -19,8 +19,8 @@ GLuint engine::Setup(int width, int height, const char *title){
   GLuint triangle = render::screenTriangleInit();
   screen_tex::screenTextureCreate(screen_tex::tex, width, height);
 
-  //LOCK CURSOR
-  mouse::lock(window::window);
+  //LOCK CURSOR AND SET CALLBACK
+  mouse::setup(window::window);
   
 
   return triangle;

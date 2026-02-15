@@ -5,18 +5,22 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
+
+
 find_package(glfw3 3.3 REQUIRED)
 find_package(glm REQUIRED)
 
-add_subdirectory(src/app)
-add_subdirectory(src/platform/window)
-add_subdirectory(src/platform/input)
-add_subdirectory(libs/glad)
-add_subdirectory(src/core/utils)
-add_subdirectory(src/renderer)
+file(GLOB_RECURSE SOURCES CONFIGURE_DEPENDS
+    ${CMAKE_SOURCE_DIR}/src/*.cpp
+    ${CMAKE_SOURCE_DIR}/libs/glad.c
+)
+
+message(STATUS "SOURCES: ${SOURCES}")
 
 
-target_link_libraries(${PROJECT_NAME}  engine screen_tex shader_tools window glm::glm glfw glad render mouse)
- 
+add_executable(VxTracer src/app/main.cpp ${SOURCES})
+
+target_link_libraries(${PROJECT_NAME}  glm::glm glfw )
+
+
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-

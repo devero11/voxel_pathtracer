@@ -16,4 +16,5 @@ namespace shader_tools{
 
   GLuint compileShader(const std::string& path, GLenum type);
 
+  void logGPUChunk(GLuint textureID, int w, int h, int d) ;
 } 
