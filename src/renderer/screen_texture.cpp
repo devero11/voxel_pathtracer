@@ -121,6 +121,8 @@ void screen_tex::computeTexture(GLuint& tex, int width, int height, GLuint& shad
 
   glDispatchCompute((width+15)/16, (height+15)/16, 1);
   glMemoryBarrier(GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
+  
+
 
   }
 

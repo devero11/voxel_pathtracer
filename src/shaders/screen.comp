@@ -23,7 +23,7 @@ vec3 voxelColor = vec3(1,1,1);
 
 vec3 voxelColor2 = vec3(1,0,0);
 
-vec3 voxelColor3 = vec3(0,1,0);
+vec3 voxelColor3 = vec3(0.3,1,0);
 
 
 uint pcg_hash(uint v) {
@@ -89,7 +89,7 @@ vec4 calculateLight(vec3 initialDir, vec3 initialPos, uint resample) {
     } else {
         currentPos = initialPos; // Already inside
     }
-    for(int bounce = 0; bounce <8; bounce++) {
+    for(int bounce = 0; bounce <4; bounce++) {
         ivec3 mapPos = ivec3(floor(currentPos));
         ivec3 rayStep = ivec3(sign(dir));
         vec3 deltaDist = abs(1.0 / (dir + 1e-30));
@@ -156,11 +156,13 @@ vec4 calculateLight(vec3 initialDir, vec3 initialPos, uint resample) {
             
             if(voxel == 10.0) { 
 
+               lightColor = vec3(1f,1f,1);
                 finalColor = lightColor * intensity * throughput;
+
                 return vec4(finalColor, 1.0);
             }
              if(voxel == 11.0) { 
-               lightColor = vec3(1f,1f,0);
+               lightColor = vec3(0f,1f,1);
                  intensity = 5;
                 finalColor = lightColor * intensity * throughput;
                 return vec4(finalColor, 1.0);
@@ -200,8 +202,8 @@ void main() {
     vec4 color = vec4(0,0,0f,1); 
     int resamples = 1;
     if (u_frame_count <= 1) {
-       imageStore(acumulator, pixelCoords, vec4(0,0,0, 1.0));
-       resamples = 10;
+       //imageStore(acumulator, pixelCoords, imageLoad(imgOutput, pixelCoords));
+       resamples = 5;
     }
     for(int i = 0; i<resamples;i++){
       color +=  calculateLight(dir, currentPos, i); 
@@ -223,9 +225,7 @@ void main() {
     else
       imageStore(acumulator, pixelCoords,vec4(averageColor,1));
 
-
-   
-    averageColor = pow(averageColor, vec3(1.0 / 2.2));
+      averageColor = pow(averageColor, vec3(1.0 / 2.2));
 
     imageStore(imgOutput, pixelCoords, vec4(averageColor, 1.0));
 
