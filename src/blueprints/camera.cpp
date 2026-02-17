@@ -69,4 +69,6 @@ void Camera::Move(){
   if (glfwGetKey(window::window, GLFW_KEY_S) == GLFW_PRESS){ this->position -= this->forward*(Time::deltaTime*3);  sinceMoved = 1;}
   if (glfwGetKey(window::window, GLFW_KEY_A) == GLFW_PRESS){ this->position -= this->right*(Time::deltaTime*3); sinceMoved = 1;}
   if (glfwGetKey(window::window, GLFW_KEY_D) == GLFW_PRESS){ this->position += this->right*(Time::deltaTime*3); sinceMoved = 1;}
+
+  
 }

@@ -1,6 +1,7 @@
 #include "screen_texture.h"
 #include "../core/utils/shader_tools.h"
 #include <GL/gl.h>
+#include <GLFW/glfw3.h>
 #include <cmath>
 #include <glm/ext/vector_float3.hpp>
 #include <glm/trigonometric.hpp>
@@ -25,6 +26,10 @@ GLint horLoc;
 GLint verLoc;
 
 GLint frameLoc;
+
+GLint frameLocFrag;
+
+GLint seedLoc;
 
 int frameCount = 1;
 float halfHeight;
@@ -87,13 +92,15 @@ void screen_tex::screenTextureCreate(GLuint& tex, int width, int height){
   float borderColor[] = { 0.0f, 0.0f, 0.0f, 0.0f };
   glTexParameterfv(GL_TEXTURE_3D, GL_TEXTURE_BORDER_COLOR, borderColor);
 
-  //LOAD UNIFORMS
+  //LOAD UNIFORMSFrag
   posLoc = glGetUniformLocation(screen_tex::shader, "camPos");
   dirLoc = glGetUniformLocation(screen_tex::shader, "camForward");
   horLoc = glGetUniformLocation(screen_tex::shader, "Horizontal");
   verLoc = glGetUniformLocation(screen_tex::shader, "Vertical");
 
   frameLoc = glGetUniformLocation(screen_tex::shader, "u_frame_count");
+
+  seedLoc = glGetUniformLocation(screen_tex::shader, "seedU");
 }
 
 void screen_tex::computeTexture(GLuint& tex, int width, int height, GLuint& shader){
@@ -112,16 +119,25 @@ void screen_tex::computeTexture(GLuint& tex, int width, int height, GLuint& shad
   glUniform3fv(horLoc, 1,&Horizontal[0]);
   glUniform3fv(verLoc, 1,&Vertical[0]);
   glUniform1i(frameLoc, frameCount);
+  float seed = glfwGetTime()*100;
+  glUniform1f(seedLoc, seed);
 
  // glBindImageTexture(1, chunk_data, 0, GL_FALSE, 0, GL_READ_ONLY, GL_R8UI);
  // glBindTexture(GL_TEXTURE_3D, acum);
  //
   glActiveTexture(GL_TEXTURE1);
   glBindTexture(GL_TEXTURE_3D, chunk_data);
+  glPixelStorei(GL_UNPACK_ALIGNMENT, 1); 
+  glTexSubImage3D(GL_TEXTURE_3D, 0, 0, 0, 0, (screen_tex::scene)->chunk.width,
+                                             (screen_tex::scene)->chunk.length,
+                                             (screen_tex::scene)->chunk.depth, GL_RED_INTEGER, GL_UNSIGNED_BYTE, (screen_tex::scene)->chunk.voxels);
+
+
 
   glDispatchCompute((width+15)/16, (height+15)/16, 1);
   glMemoryBarrier(GL_SHADER_IMAGE_ACCESS_BARRIER_BIT);
   
+
 
 
   }

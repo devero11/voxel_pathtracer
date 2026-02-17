@@ -32,6 +32,7 @@ int main(int argc, const char * argv[]){
   while(!glfwWindowShouldClose(window::window)){
     Time::calculateDeltaTime();         
 
+
   
     engine::Render(WIDTH, HEIGHT, engine::triangle);
     glfwSwapBuffers(window::window);
@@ -39,6 +40,7 @@ int main(int argc, const char * argv[]){
 
     (scene.activeCamera)->Update();
     (scene.activeCamera)->Move();
+    scene.Update(window::window); 
 
   }
 

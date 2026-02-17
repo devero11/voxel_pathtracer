@@ -304,6 +304,9 @@ CMakeFiles/VxTracer.dir/src/app/main.cpp.o: \
  /usr/include/glm/detail/func_trigonometric.inl \
  /home/devero11/voxel_pathtracer/src/app/../renderer/../scenes/../blueprints/../platform/input/mouse.h \
  /home/devero11/voxel_pathtracer/src/app/../renderer/../scenes/../blueprints/voxel.h \
- /usr/include/c++/15/chrono /usr/include/c++/15/thread \
- /usr/include/c++/15/bits/std_thread.h \
+ /usr/include/c++/15/vector /usr/include/c++/15/bits/stl_uninitialized.h \
+ /usr/include/c++/15/bits/stl_vector.h \
+ /usr/include/c++/15/bits/stl_bvector.h \
+ /usr/include/c++/15/bits/vector.tcc /usr/include/c++/15/chrono \
+ /usr/include/c++/15/thread /usr/include/c++/15/bits/std_thread.h \
  /usr/include/c++/15/bits/this_thread_sleep.h

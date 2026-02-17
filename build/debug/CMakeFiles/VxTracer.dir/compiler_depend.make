@@ -231,12 +231,15 @@ CMakeFiles/VxTracer.dir/src/app/engine.cpp.o: /home/devero11/voxel_pathtracer/sr
   /usr/include/c++/15/bits/sstream.tcc \
   /usr/include/c++/15/bits/std_abs.h \
   /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
   /usr/include/c++/15/bits/stl_construct.h \
   /usr/include/c++/15/bits/stl_function.h \
   /usr/include/c++/15/bits/stl_iterator.h \
   /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15/bits/stl_iterator_base_types.h \
   /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
   /usr/include/c++/15/bits/streambuf.tcc \
   /usr/include/c++/15/bits/streambuf_iterator.h \
   /usr/include/c++/15/bits/string_view.tcc \
@@ -245,6 +248,7 @@ CMakeFiles/VxTracer.dir/src/app/engine.cpp.o: /home/devero11/voxel_pathtracer/sr
   /usr/include/c++/15/bits/uses_allocator.h \
   /usr/include/c++/15/bits/uses_allocator_args.h \
   /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
   /usr/include/c++/15/bits/version.h \
   /usr/include/c++/15/cassert \
   /usr/include/c++/15/cctype \
@@ -305,6 +309,7 @@ CMakeFiles/VxTracer.dir/src/app/engine.cpp.o: /home/devero11/voxel_pathtracer/sr
   /usr/include/c++/15/tuple \
   /usr/include/c++/15/type_traits \
   /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/vector \
   /usr/include/c++/15/x86_64-redhat-linux/bits/atomic_word.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/c++allocator.h \
@@ -640,12 +645,15 @@ CMakeFiles/VxTracer.dir/src/app/main.cpp.o: /home/devero11/voxel_pathtracer/src/
   /usr/include/c++/15/bits/std_abs.h \
   /usr/include/c++/15/bits/std_thread.h \
   /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
   /usr/include/c++/15/bits/stl_construct.h \
   /usr/include/c++/15/bits/stl_function.h \
   /usr/include/c++/15/bits/stl_iterator.h \
   /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15/bits/stl_iterator_base_types.h \
   /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
   /usr/include/c++/15/bits/streambuf.tcc \
   /usr/include/c++/15/bits/streambuf_iterator.h \
   /usr/include/c++/15/bits/string_view.tcc \
@@ -655,6 +663,7 @@ CMakeFiles/VxTracer.dir/src/app/main.cpp.o: /home/devero11/voxel_pathtracer/src/
   /usr/include/c++/15/bits/uses_allocator.h \
   /usr/include/c++/15/bits/uses_allocator_args.h \
   /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
   /usr/include/c++/15/bits/version.h \
   /usr/include/c++/15/cassert \
   /usr/include/c++/15/cctype \
@@ -717,6 +726,7 @@ CMakeFiles/VxTracer.dir/src/app/main.cpp.o: /home/devero11/voxel_pathtracer/src/
   /usr/include/c++/15/tuple \
   /usr/include/c++/15/type_traits \
   /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/vector \
   /usr/include/c++/15/x86_64-redhat-linux/bits/atomic_word.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/c++allocator.h \
@@ -1344,6 +1354,7 @@ CMakeFiles/VxTracer.dir/src/blueprints/voxel.cpp.o: /home/devero11/voxel_pathtra
   /usr/include/c++/15/bits/basic_string.tcc \
   /usr/include/c++/15/bits/char_traits.h \
   /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/codecvt.h \
   /usr/include/c++/15/bits/concept_check.h \
   /usr/include/c++/15/bits/cpp_type_traits.h \
   /usr/include/c++/15/bits/cxxabi_forced.h \
@@ -1351,6 +1362,7 @@ CMakeFiles/VxTracer.dir/src/blueprints/voxel.cpp.o: /home/devero11/voxel_pathtra
   /usr/include/c++/15/bits/exception.h \
   /usr/include/c++/15/bits/exception_defines.h \
   /usr/include/c++/15/bits/exception_ptr.h \
+  /usr/include/c++/15/bits/fstream.tcc \
   /usr/include/c++/15/bits/functexcept.h \
   /usr/include/c++/15/bits/functional_hash.h \
   /usr/include/c++/15/bits/hash_bytes.h \
@@ -1379,6 +1391,7 @@ CMakeFiles/VxTracer.dir/src/blueprints/voxel.cpp.o: /home/devero11/voxel_pathtra
   /usr/include/c++/15/bits/std_abs.h \
   /usr/include/c++/15/bits/stl_algo.h \
   /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
   /usr/include/c++/15/bits/stl_construct.h \
   /usr/include/c++/15/bits/stl_function.h \
   /usr/include/c++/15/bits/stl_heap.h \
@@ -1387,6 +1400,8 @@ CMakeFiles/VxTracer.dir/src/blueprints/voxel.cpp.o: /home/devero11/voxel_pathtra
   /usr/include/c++/15/bits/stl_iterator_base_types.h \
   /usr/include/c++/15/bits/stl_pair.h \
   /usr/include/c++/15/bits/stl_tempbuf.h \
+  /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
   /usr/include/c++/15/bits/streambuf.tcc \
   /usr/include/c++/15/bits/streambuf_iterator.h \
   /usr/include/c++/15/bits/string_view.tcc \
@@ -1395,6 +1410,7 @@ CMakeFiles/VxTracer.dir/src/blueprints/voxel.cpp.o: /home/devero11/voxel_pathtra
   /usr/include/c++/15/bits/uses_allocator.h \
   /usr/include/c++/15/bits/uses_allocator_args.h \
   /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
   /usr/include/c++/15/bits/version.h \
   /usr/include/c++/15/cassert \
   /usr/include/c++/15/cctype \
@@ -1405,6 +1421,7 @@ CMakeFiles/VxTracer.dir/src/blueprints/voxel.cpp.o: /home/devero11/voxel_pathtra
   /usr/include/c++/15/cstdint \
   /usr/include/c++/15/cstdio \
   /usr/include/c++/15/cstdlib \
+  /usr/include/c++/15/cstring \
   /usr/include/c++/15/cwchar \
   /usr/include/c++/15/cwctype \
   /usr/include/c++/15/debug/assertions.h \
@@ -1415,6 +1432,7 @@ CMakeFiles/VxTracer.dir/src/blueprints/voxel.cpp.o: /home/devero11/voxel_pathtra
   /usr/include/c++/15/ext/numeric_traits.h \
   /usr/include/c++/15/ext/string_conversions.h \
   /usr/include/c++/15/ext/type_traits.h \
+  /usr/include/c++/15/fstream \
   /usr/include/c++/15/initializer_list \
   /usr/include/c++/15/ios \
   /usr/include/c++/15/iosfwd \
@@ -1434,9 +1452,12 @@ CMakeFiles/VxTracer.dir/src/blueprints/voxel.cpp.o: /home/devero11/voxel_pathtra
   /usr/include/c++/15/tuple \
   /usr/include/c++/15/type_traits \
   /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/vector \
   /usr/include/c++/15/x86_64-redhat-linux/bits/atomic_word.h \
+  /usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/c++allocator.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h \
+  /usr/include/c++/15/x86_64-redhat-linux/bits/c++io.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/c++locale.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/cpu_defines.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/ctype_base.h \
@@ -1471,6 +1492,8 @@ CMakeFiles/VxTracer.dir/src/blueprints/voxel.cpp.o: /home/devero11/voxel_pathtra
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -2887,6 +2910,7 @@ CMakeFiles/VxTracer.dir/src/scenes/scene.cpp.o: /home/devero11/voxel_pathtracer/
   /usr/include/c++/15/bits/basic_string.tcc \
   /usr/include/c++/15/bits/char_traits.h \
   /usr/include/c++/15/bits/charconv.h \
+  /usr/include/c++/15/bits/codecvt.h \
   /usr/include/c++/15/bits/concept_check.h \
   /usr/include/c++/15/bits/cpp_type_traits.h \
   /usr/include/c++/15/bits/cxxabi_forced.h \
@@ -2894,6 +2918,7 @@ CMakeFiles/VxTracer.dir/src/scenes/scene.cpp.o: /home/devero11/voxel_pathtracer/
   /usr/include/c++/15/bits/exception.h \
   /usr/include/c++/15/bits/exception_defines.h \
   /usr/include/c++/15/bits/exception_ptr.h \
+  /usr/include/c++/15/bits/fstream.tcc \
   /usr/include/c++/15/bits/functexcept.h \
   /usr/include/c++/15/bits/functional_hash.h \
   /usr/include/c++/15/bits/hash_bytes.h \
@@ -2922,12 +2947,15 @@ CMakeFiles/VxTracer.dir/src/scenes/scene.cpp.o: /home/devero11/voxel_pathtracer/
   /usr/include/c++/15/bits/specfun.h \
   /usr/include/c++/15/bits/std_abs.h \
   /usr/include/c++/15/bits/stl_algobase.h \
+  /usr/include/c++/15/bits/stl_bvector.h \
   /usr/include/c++/15/bits/stl_construct.h \
   /usr/include/c++/15/bits/stl_function.h \
   /usr/include/c++/15/bits/stl_iterator.h \
   /usr/include/c++/15/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/15/bits/stl_iterator_base_types.h \
   /usr/include/c++/15/bits/stl_pair.h \
+  /usr/include/c++/15/bits/stl_uninitialized.h \
+  /usr/include/c++/15/bits/stl_vector.h \
   /usr/include/c++/15/bits/streambuf.tcc \
   /usr/include/c++/15/bits/streambuf_iterator.h \
   /usr/include/c++/15/bits/string_view.tcc \
@@ -2935,6 +2963,7 @@ CMakeFiles/VxTracer.dir/src/scenes/scene.cpp.o: /home/devero11/voxel_pathtracer/
   /usr/include/c++/15/bits/uses_allocator.h \
   /usr/include/c++/15/bits/uses_allocator_args.h \
   /usr/include/c++/15/bits/utility.h \
+  /usr/include/c++/15/bits/vector.tcc \
   /usr/include/c++/15/bits/version.h \
   /usr/include/c++/15/cassert \
   /usr/include/c++/15/cctype \
@@ -2956,6 +2985,7 @@ CMakeFiles/VxTracer.dir/src/scenes/scene.cpp.o: /home/devero11/voxel_pathtracer/
   /usr/include/c++/15/ext/numeric_traits.h \
   /usr/include/c++/15/ext/string_conversions.h \
   /usr/include/c++/15/ext/type_traits.h \
+  /usr/include/c++/15/fstream \
   /usr/include/c++/15/initializer_list \
   /usr/include/c++/15/ios \
   /usr/include/c++/15/iosfwd \
@@ -2985,9 +3015,12 @@ CMakeFiles/VxTracer.dir/src/scenes/scene.cpp.o: /home/devero11/voxel_pathtracer/
   /usr/include/c++/15/tuple \
   /usr/include/c++/15/type_traits \
   /usr/include/c++/15/typeinfo \
+  /usr/include/c++/15/vector \
   /usr/include/c++/15/x86_64-redhat-linux/bits/atomic_word.h \
+  /usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/c++allocator.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h \
+  /usr/include/c++/15/x86_64-redhat-linux/bits/c++io.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/c++locale.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/cpu_defines.h \
   /usr/include/c++/15/x86_64-redhat-linux/bits/ctype_base.h \
@@ -3266,10 +3299,6 @@ CMakeFiles/VxTracer.dir/src/blueprints/voxel.cpp.o:
 
 /usr/include/glm/geometric.hpp:
 
-/usr/include/c++/15/vector:
-
-/usr/include/glm/ext/vector_uint3_sized.hpp:
-
 /usr/include/glm/ext/vector_uint2_sized.hpp:
 
 /usr/include/glm/ext/vector_int4_sized.hpp:
@@ -3362,6 +3391,8 @@ CMakeFiles/VxTracer.dir/src/core/utils/shader_tools.cpp.o:
 
 /usr/include/glm/exponential.hpp:
 
+/usr/include/c++/15/cstring:
+
 /usr/include/glm/detail/type_vec4.inl:
 
 /usr/include/glm/detail/type_vec3.inl:
@@ -3427,6 +3458,20 @@ CMakeFiles/VxTracer.dir/src/core/utils/shader_tools.cpp.o:
 /usr/include/c++/15/x86_64-redhat-linux/bits/gthr.h:
 
 /usr/include/c++/15/x86_64-redhat-linux/bits/error_constants.h:
+
+/usr/include/c++/15/x86_64-redhat-linux/bits/c++io.h:
+
+/usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h:
+
+CMakeFiles/VxTracer.dir/src/platform/input/keyboard.cpp.o:
+
+/usr/include/c++/15/x86_64-redhat-linux/bits/c++allocator.h:
+
+/usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h:
+
+/usr/include/glm/ext/matrix_double4x4_precision.hpp:
+
+/usr/include/c++/15/x86_64-redhat-linux/bits/atomic_word.h:
 
 /usr/include/glm/vec2.hpp:
 
@@ -3541,8 +3586,6 @@ CMakeFiles/VxTracer.dir/src/platform/window/window.cpp.o:
 /usr/include/c++/15/x86_64-redhat-linux/bits/c++locale.h:
 
 /usr/include/c++/15/bits/codecvt.h:
-
-/usr/include/c++/15/x86_64-redhat-linux/bits/c++io.h:
 
 /home/devero11/voxel_pathtracer/src/blueprints/voxel.h:
 
@@ -3762,10 +3805,6 @@ CMakeFiles/VxTracer.dir/src/platform/input/mouse.cpp.o:
 
 /usr/include/c++/15/bits/cxxabi_forced.h:
 
-/usr/include/glm/ext/matrix_double4x4_precision.hpp:
-
-/usr/include/c++/15/x86_64-redhat-linux/bits/atomic_word.h:
-
 /usr/include/c++/15/bits/basic_ios.h:
 
 /usr/include/c++/15/tr1/modified_bessel_func.tcc:
@@ -3779,8 +3818,6 @@ CMakeFiles/VxTracer.dir/src/platform/input/mouse.cpp.o:
 /usr/include/c++/15/bits/refwrap.h:
 
 /usr/include/c++/15/type_traits:
-
-/usr/include/c++/15/x86_64-redhat-linux/bits/basic_file.h:
 
 /usr/include/bits/types/__locale_t.h:
 
@@ -3890,14 +3927,6 @@ CMakeFiles/VxTracer.dir/src/platform/input/mouse.cpp.o:
 
 /usr/include/c++/15/bits/fstream.tcc:
 
-/usr/include/c++/15/bits/stl_vector.h:
-
-/usr/include/glm/mat2x4.hpp:
-
-/usr/include/c++/15/x86_64-redhat-linux/bits/os_defines.h:
-
-/usr/include/c++/15/bits/functexcept.h:
-
 /usr/include/c++/15/bits/functional_hash.h:
 
 /usr/include/c++/15/ext/type_traits.h:
@@ -3994,13 +4023,17 @@ CMakeFiles/VxTracer.dir/libs/glad/glad.c.o:
 
 /usr/include/c++/15/clocale:
 
-/usr/include/c++/15/bits/ptr_traits.h:
-
-/usr/include/c++/15/bits/stl_construct.h:
-
 /usr/include/glm/ext/matrix_float3x3_precision.hpp:
 
 /usr/include/c++/15/bits/stl_iterator.h:
+
+/usr/include/glm/ext/vector_uint3_sized.hpp:
+
+/usr/include/c++/15/vector:
+
+/usr/include/c++/15/bits/ptr_traits.h:
+
+/usr/include/c++/15/bits/stl_construct.h:
 
 /usr/include/glm/ext/matrix_double4x4.hpp:
 
@@ -4008,15 +4041,25 @@ CMakeFiles/VxTracer.dir/libs/glad/glad.c.o:
 
 /usr/include/c++/15/ext/atomicity.h:
 
-/usr/include/c++/15/bits/stl_bvector.h:
-
 /usr/include/glm/detail/_vectorize.hpp:
+
+/usr/include/c++/15/bits/stl_bvector.h:
 
 /usr/include/c++/15/bits/stl_pair.h:
 
 /usr/include/bits/types/struct_FILE.h:
 
 /usr/include/c++/15/cctype:
+
+/usr/include/glm/mat2x4.hpp:
+
+/usr/include/c++/15/x86_64-redhat-linux/bits/os_defines.h:
+
+/usr/include/c++/15/bits/functexcept.h:
+
+/usr/include/c++/15/bits/stl_vector.h:
+
+/usr/include/c++/15/cwctype:
 
 /usr/include/glm/detail/type_vec1.hpp:
 
@@ -4037,8 +4080,6 @@ CMakeFiles/VxTracer.dir/libs/glad/glad.c.o:
 /usr/include/c++/15/cstdio:
 
 /usr/include/c++/15/ctime:
-
-/usr/include/c++/15/cwctype:
 
 /usr/include/glm/ext/matrix_double3x4_precision.hpp:
 
@@ -4115,9 +4156,3 @@ CMakeFiles/VxTracer.dir/src/core/time.cpp.o:
 /usr/include/c++/15/tr1/special_function_util.h:
 
 /usr/include/c++/15/tuple:
-
-CMakeFiles/VxTracer.dir/src/platform/input/keyboard.cpp.o:
-
-/usr/include/c++/15/x86_64-redhat-linux/bits/c++allocator.h:
-
-/usr/include/c++/15/x86_64-redhat-linux/bits/c++config.h:
